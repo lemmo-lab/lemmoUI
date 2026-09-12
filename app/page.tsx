@@ -9,17 +9,13 @@ import {
   CircleHelp,
   Clipboard,
   Code2,
-  ExternalLink,
   Globe,
   Layers3,
-  Menu,
-  Moon,
   Package,
   Search,
   Sparkles,
-  Sun,
-  X,
 } from 'lucide-react'
+import { SiteHeader, SiteLogo } from '@/components/site-header'
 
 const sections = [
   { label: 'Get Started', items: ['Introduction', 'Installation', 'Your first component'] },
@@ -27,10 +23,6 @@ const sections = [
   { label: 'Blocks', items: ['Sidebar', 'Dashboard', 'Authentication', 'Calendars'] },
   { label: 'Resources', items: ['Theming', 'Colors', 'Typography', 'Changelog'] },
 ]
-
-function Logo() {
-  return <div className="flex items-center gap-2.5 font-semibold tracking-tight"><span className="grid size-6 place-items-center border border-foreground/80 text-[11px] font-bold">L</span><span>LEMU</span></div>
-}
 
 function AlertPreview() {
   return (
@@ -48,7 +40,6 @@ function CodeBlock() {
 }
 
 export default function Page() {
-  const [open, setOpen] = useState(false)
   const [dark, setDark] = useState(true)
   const [query, setQuery] = useState('')
   const [copied, setCopied] = useState(false)
@@ -58,13 +49,7 @@ export default function Page() {
 
   return (
     <div className={dark ? 'dark min-h-screen bg-background text-foreground' : 'min-h-screen bg-background text-foreground'}>
-      <header className="sticky top-0 z-20 border-b border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-4 lg:px-8">
-          <div className="flex items-center gap-8"><Logo /><nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex"><a className="text-foreground" href="#docs">Docs</a><a href="#components">Components</a><a href="#blocks">Blocks</a><a href="#themes">Themes</a></nav></div>
-          <div className="flex items-center gap-2"><button aria-label="Toggle theme" onClick={() => setDark(!dark)} className="grid size-8 place-items-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground">{dark ? <Sun className="size-4" /> : <Moon className="size-4" />}</button><a href="#github" aria-label="GitHub" className="hidden size-8 place-items-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground sm:grid"><ExternalLink className="size-4" /></a><button aria-label="Open menu" onClick={() => setOpen(!open)} className="grid size-8 place-items-center rounded-md text-muted-foreground hover:bg-accent md:hidden">{open ? <X className="size-4" /> : <Menu className="size-4" />}</button></div>
-        </div>
-        {open && <nav className="border-t border-border px-4 py-4 md:hidden"><div className="flex flex-col gap-3 text-sm"><a href="#docs">Docs</a><a href="#components">Components</a><a href="#blocks">Blocks</a><a href="#themes">Themes</a></div></nav>}
-      </header>
+      <SiteHeader dark={dark} onThemeChange={() => setDark(!dark)} />
 
       <div id="docs" className="mx-auto grid max-w-[1440px] lg:grid-cols-[220px_minmax(0,1fr)_220px]">
         <aside className="hidden border-r border-border px-5 py-8 lg:block"><div className="sticky top-20"><p className="mb-5 text-xs font-medium uppercase tracking-widest text-muted-foreground">Documentation</p><div className="flex flex-col gap-7">{sections.map((section) => <div key={section.label}><p className="mb-2 text-sm font-medium">{section.label}</p><div className="flex flex-col gap-1">{section.items.map((item) => <a key={item} href={item === 'Alert' ? '/components/alert' : `#${item.toLowerCase().replaceAll(' ', '-')}`} className={`rounded-md px-2 py-1.5 text-sm ${item === 'Introduction' ? 'bg-accent text-foreground' : 'text-muted-foreground hover:text-foreground'}`}>{item}</a>)}</div></div>)}</div></div></aside>
@@ -77,11 +62,11 @@ export default function Page() {
 
           <section id="installation" className="mt-24 border-t border-border pt-10"><p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">Installation</p><h2 className="text-2xl font-semibold tracking-tight">Start with a single command.</h2><p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">Install only what you need. Every component is yours to customize, extend, and ship.</p><button onClick={copyCommand} className="mt-6 flex w-full items-center justify-between rounded-lg border border-border bg-muted/30 px-4 py-3 text-left font-mono text-xs text-muted-foreground hover:bg-accent"><span><span className="mr-2 text-muted-foreground">$</span>pnpm dlx shadcn@latest add alert</span>{copied ? <Check className="size-4 text-foreground" /> : <Clipboard className="size-4" />}</button><div className="mt-8"><CodeBlock /></div></section>
 
-          <section id="blocks" className="mt-24 border-t border-border pt-10"><p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">Next steps</p><h2 className="text-2xl font-semibold tracking-tight">Make it yours.</h2><div className="mt-6 grid gap-3 sm:grid-cols-2"><a href="#theming" className="group rounded-lg border border-border p-4 hover:bg-accent"><Package className="mb-8 size-5 text-muted-foreground" /><p className="text-sm font-medium">Customize your theme</p><p className="mt-1 text-sm text-muted-foreground">Colors, type, and radius.</p><ChevronRight className="mt-4 size-4 text-muted-foreground transition-transform group-hover:translate-x-1" /></a><a href="#blocks" className="group rounded-lg border border-border p-4 hover:bg-accent"><Box className="mb-8 size-5 text-muted-foreground" /><p className="text-sm font-medium">Explore blocks</p><p className="mt-1 text-sm text-muted-foreground">Production-ready patterns.</p><ChevronRight className="mt-4 size-4 text-muted-foreground transition-transform group-hover:translate-x-1" /></a></div></section></div></main>
+          <section id="blocks" className="mt-24 border-t border-border pt-10"><p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">Next steps</p><h2 className="text-2xl font-semibold tracking-tight">Make it yours.</h2><div className="mt-6 grid gap-3 sm:grid-cols-2"><a href="#theming" className="group rounded-lg border border-border p-4 hover:bg-accent"><Package className="mb-8 size-5 text-muted-foreground" /><p className="text-sm font-medium">Customize your theme</p><p className="mt-1 text-sm text-muted-foreground">Colors, type, and radius.</p><ArrowRight className="mt-5 size-4 text-muted-foreground transition-transform group-hover:translate-x-1" /></a><a href="#blocks" className="group rounded-lg border border-border p-4 hover:bg-accent"><Box className="mb-8 size-5 text-muted-foreground" /><p className="text-sm font-medium">Explore blocks</p><p className="mt-1 text-sm text-muted-foreground">Production-ready patterns.</p><ArrowRight className="mt-5 size-4 text-muted-foreground transition-transform group-hover:translate-x-1" /></a></div></section></div></main>
 
         <aside className="hidden border-l border-border px-5 py-8 xl:block"><div className="sticky top-20"><div className="mb-8 flex items-center gap-2 rounded-md border border-border px-3 py-2 text-sm text-muted-foreground"><Search className="size-3.5" /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search docs" className="min-w-0 bg-transparent outline-none placeholder:text-muted-foreground" /></div><div className="mb-8"><p className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground">On this page</p><div className="flex flex-col gap-2 border-l border-border pl-3 text-sm text-muted-foreground"><a href="#components" className="hover:text-foreground">Components</a><a href="#installation" className="hover:text-foreground">Installation</a><a href="#blocks" className="hover:text-foreground">Next steps</a></div></div><div className="rounded-lg border border-border p-4"><CircleHelp className="mb-5 size-4 text-muted-foreground" /><p className="text-sm font-medium">Need help?</p><p className="mt-1 text-xs leading-5 text-muted-foreground">Ask a question or share feedback with the community.</p><a className="mt-4 inline-flex items-center gap-1 text-xs font-medium" href="#discord">Join Discord <ArrowRight className="size-3" /></a></div></div></aside>
       </div>
-      <footer className="border-t border-border"><div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8"><Logo /><span>Open source UI for thoughtful interfaces.</span><span>MIT License</span></div></footer>
+      <footer className="border-t border-border"><div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between lg:px-8"><SiteLogo /><span>Open source UI for thoughtful interfaces.</span><span>MIT License</span></div></footer>
     </div>
   )
 }

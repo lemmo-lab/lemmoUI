@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowLeft, Check, Copy, Info, Moon, Sun, Terminal } from 'lucide-react'
+import { ArrowLeft, Check, Copy, Info, Terminal } from 'lucide-react'
+import { SiteHeader, SiteLogo } from '@/components/site-header'
 
 const installCommand = 'pnpm dlx shadcn@latest add alert'
 
@@ -34,17 +35,7 @@ export default function AlertPage() {
 
   return (
     <div className={dark ? 'dark min-h-screen bg-background text-foreground' : 'min-h-screen bg-background text-foreground'}>
-      <header className="border-b border-border">
-        <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-5 sm:px-8">
-          <a href="/" className="flex items-center gap-2.5 text-sm font-semibold tracking-tight">
-            <span className="grid size-6 place-items-center border border-foreground/80 text-[11px] font-bold">L</span>
-            <span>LEMU</span>
-          </a>
-          <button aria-label="Toggle theme" onClick={() => setDark(!dark)} className="grid size-8 place-items-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground">
-            {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
-          </button>
-        </div>
-      </header>
+      <SiteHeader dark={dark} onThemeChange={() => setDark(!dark)} />
 
       <div className="mx-auto max-w-5xl px-5 py-8 sm:px-8 sm:py-12">
         <a href="/" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
@@ -95,7 +86,7 @@ export function StatusAlert() {
       </div>
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <a href="/" className="flex items-center gap-2 font-semibold tracking-tight text-foreground"><span className="grid size-5 place-items-center border border-foreground/80 text-[10px] font-bold">L</span>LEMU</a>
+          <a href="/" className="text-foreground"><SiteLogo /></a>
           <span>Open source UI for thoughtful interfaces.</span>
           <span>MIT License</span>
         </div>
