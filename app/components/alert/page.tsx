@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ArrowLeft, Check, Copy, Info, Terminal } from 'lucide-react'
 import { SiteHeader, SiteLogo } from '@/components/site-header'
+import { ComponentPagination } from '@/components/component-pagination'
 
 const installCommand = 'pnpm dlx shadcn@latest add alert'
 
@@ -84,6 +85,7 @@ export function StatusAlert() {
           </div>
         </section>
       </div>
+      <ComponentPagination />
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-8 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <a href="/" className="text-foreground"><SiteLogo /></a>
