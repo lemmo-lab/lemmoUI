@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Box,
   Check,
-  ChevronDown,
   ChevronRight,
   CircleHelp,
   Clipboard,
@@ -16,11 +15,9 @@ import {
   Menu,
   Moon,
   Package,
-  PanelLeft,
   Search,
   Sparkles,
   Sun,
-  Terminal,
   X,
 } from 'lucide-react'
 
@@ -47,7 +44,7 @@ function AlertPreview() {
 }
 
 function CodeBlock() {
-  return <div className="overflow-hidden rounded-lg border border-border bg-[#101010] text-[13px] text-zinc-300 shadow-sm"><div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5 text-[11px] text-zinc-500"><span>app/page.tsx</span><Clipboard className="size-3.5" /></div><pre className="overflow-x-auto p-4 leading-6"><code><span className="text-purple-300">import</span> {'{ Alert }'} <span className="text-purple-300">from</span> <span className="text-emerald-300">&quot;@/components/ui/alert&quot;</span>{'\n\n'}<span className="text-purple-300">export default function</span> <span className="text-blue-300">Page</span>() {'{'}{'\n'}  <span className="text-purple-300">return</span> ({'\n'}    <span className="text-pink-300">&lt;Alert&gt;</span>{'\n'}      <span className="text-pink-300">&lt;AlertTitle&gt;</span>Success<span className="text-pink-300">&lt;/AlertTitle&gt;</span>{'\n'}      <span className="text-pink-300">&lt;AlertDescription&gt;</span>{'\n'}        Your project is ready.\n      <span className="text-pink-300">&lt;/AlertDescription&gt;</span>{'\n'}    <span className="text-pink-300">&lt;/Alert&gt;</span>{'\n'}  ){'}'}</code></pre></div>
+  return <div className="overflow-hidden rounded-lg border border-border bg-[#101010] text-[13px] text-zinc-300 shadow-sm"><div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5 text-[11px] text-zinc-500"><span>app/page.tsx</span><Clipboard className="size-3.5" /></div><pre className="overflow-x-auto p-4 leading-6"><code><span className="text-purple-300">import</span> {'{ Alert }'} <span className="text-purple-300">from</span> <span className="text-emerald-300">&quot;@/components/ui/alert&quot;</span>{'\n\n'}<span className="text-purple-300">export default function</span> <span className="text-blue-300">Page</span>() {'{'}{'\n'}  <span className="text-purple-300">return</span> ({'\n'}    <span className="text-pink-300">&lt;Alert&gt;</span>{'\n'}      <span className="text-pink-300">&lt;AlertTitle&gt;</span>Success<span className="text-pink-300">&lt;/AlertTitle&gt;</span>{'\n'}      <span className="text-pink-300">&lt;AlertDescription&gt;</span>{'\n'}        {'Your project is ready.'}{'\n'}      <span className="text-pink-300">&lt;/AlertDescription&gt;</span>{'\n'}    <span className="text-pink-300">&lt;/Alert&gt;</span>{'\n'}  ){'}'}</code></pre></div>
 }
 
 export default function Page() {
