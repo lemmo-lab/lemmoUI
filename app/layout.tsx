@@ -3,25 +3,21 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'LEMU — Thoughtful interface primitives',
-  description: 'A curated collection of accessible, composable UI components for the web.',
-  generator: 'LEMU',
+  title: 'LEMMO — Thoughtful interface primitives',
+  description: 'A curated collection of accessible, composable UI components for LEMMO.',
+  generator: 'LEMMO',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon.ico',
+        sizes: 'any',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
+        url: '/icons/logo-mark.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/icons/app-icon.svg',
   },
 }
 

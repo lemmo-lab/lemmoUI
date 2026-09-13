@@ -1,6 +1,6 @@
-# ui
+# LEMMO UI (`lemmoui`)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Curated collection of accessible, composable UI components and design system primitives for LEMMO.
 
 ## Built with v0
 

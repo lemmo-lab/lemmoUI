@@ -1,10 +1,16 @@
 'use client'
 
+import { LemmoMark } from '@/components/icons'
 import { ExternalLink, Menu, Moon, Sun, X } from 'lucide-react'
 import { useState } from 'react'
 
-function Logo() {
-  return <div className="flex items-center gap-2.5 font-semibold tracking-tight"><span className="grid size-6 place-items-center rounded-md bg-[#d1fe17] p-1"><img src="/lemu-mark.svg" alt="" className="size-full" /></span><span>LEMU</span></div>
+export function Logo({ className }: { className?: string }) {
+  return (
+    <div className={`flex items-center gap-2.5 font-semibold tracking-tight text-foreground ${className ?? ''}`}>
+      <LemmoMark className="size-6 shrink-0 fill-current text-foreground transition-colors duration-200" />
+      <span>LEMMO</span>
+    </div>
+  )
 }
 
 export function SiteHeader({ dark, onThemeChange }: { dark: boolean; onThemeChange: () => void }) {
@@ -21,6 +27,6 @@ export function SiteHeader({ dark, onThemeChange }: { dark: boolean; onThemeChan
   )
 }
 
-export function SiteLogo() {
-  return <Logo />
+export function SiteLogo({ className }: { className?: string } = {}) {
+  return <Logo className={className} />
 }
