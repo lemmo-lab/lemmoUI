@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 
-export type ThemeName = 'default' | 'neon' | 'minimal'
+export type ThemeName = 'neon' | 'midnight' | 'emerald' | 'cyberpunk' | 'minimal' | 'default'
 
 export interface ThemeContextType {
   theme: ThemeName
@@ -30,7 +30,7 @@ export function ThemeProvider({
     try {
       const savedTheme = localStorage.getItem('lemmo-theme') as ThemeName | null
       const savedDark = localStorage.getItem('lemmo-dark')
-      if (savedTheme && ['default', 'neon', 'minimal'].includes(savedTheme)) {
+      if (savedTheme && ['neon', 'midnight', 'emerald', 'cyberpunk', 'minimal', 'default'].includes(savedTheme)) {
         setThemeState(savedTheme)
       }
       if (savedDark !== null) {

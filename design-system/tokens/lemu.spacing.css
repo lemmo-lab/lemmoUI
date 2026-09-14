@@ -1,0 +1,42 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* 4 px ladder — base unit 4px, each token a quarter-rem step          */
+  /* ------------------------------------------------------------------ */
+  --lemu-space-0: 0;
+  --lemu-space-050: .125rem;   /* 2 px */
+  --lemu-space-100: .25rem;    /* 4 px */
+  --lemu-space-150: .375rem;   /* 6 px */
+  --lemu-space-200: .5rem;     /* 8 px */
+  --lemu-space-250: .625rem;   /* 10 px */
+  --lemu-space-300: .75rem;    /* 12 px */
+  --lemu-space-400: 1rem;      /* 16 px */
+  --lemu-space-500: 1.25rem;   /* 20 px */
+  --lemu-space-600: 1.5rem;    /* 24 px */
+  --lemu-space-700: 1.75rem;   /* 28 px */
+  --lemu-space-800: 2rem;      /* 32 px */
+  --lemu-space-1000: 2.5rem;   /* 40 px */
+  --lemu-space-1200: 3rem;     /* 48 px */
+  --lemu-space-1400: 3.5rem;   /* 56 px */
+  --lemu-space-1600: 4rem;     /* 64 px */
+  --lemu-space-2000: 5rem;     /* 80 px */
+  --lemu-space-2400: 6rem;     /* 96 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Gaps (between elements)                                             */
+  /* ------------------------------------------------------------------ */
+  --lemu-gap-0-5: var(--lemu-space-050);   /* 2 px  (toggle thumb offset, badge micro-gap) */
+  --lemu-gap-1: var(--lemu-space-100);     /* 4 px  (inline icon+label) */
+  --lemu-gap-1-5: var(--lemu-space-150);   /* 6 px  (table rows, feature rows) */
+  --lemu-gap-2: var(--lemu-space-200);     /* 8 px  (card grid default) */
+  --lemu-gap-2-5: var(--lemu-space-250);   /* 10 px */
+  --lemu-gap-3: var(--lemu-space-300);     /* 12 px (billing toggle, header stacks) */
+  --lemu-gap-4: var(--lemu-space-400);     /* 16 px (card grid ≥1280px) */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic rhythm (structural)                                        */
+  /* ------------------------------------------------------------------ */
+  --lemu-gap-card-grid: var(--lemu-space-200);    /* 8 px, 16 px at desktop */
+  --lemu-gap-card-inner: var(--lemu-space-200);   /* 8 px between card body rows */
+  --lemu-gap-section-sm: var(--lemu-space-1000);  /* 40 px section rhythm (py-10) */
+  --lemu-gap-section-lg: var(--lemu-space-2000);  /* 80 px section rhythm (py-20) */
+}

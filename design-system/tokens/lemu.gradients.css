@@ -1,0 +1,62 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Card surfaces — current (featured)                                  */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-surface-featured: linear-gradient(225deg, rgba(209, 254, 23, 0.16) 0%, rgba(209, 254, 23, 0.08) 28%, rgba(209, 254, 23, 0) 62%), var(--lemu-color-surface-elevated, #18191C);
+  --lemu-gradient-surface-pink-haze: radial-gradient(145% 54% at 100% 0%, color-mix(in srgb, var(--lemu-color-surface-brand-secondary) 32%, transparent) 0%, color-mix(in srgb, var(--lemu-color-surface-brand-secondary) 15%, transparent) 42%, transparent 78%), linear-gradient(180deg, color-mix(in srgb, var(--lemu-color-surface-brand-secondary) 13%, transparent) 0%, color-mix(in srgb, var(--lemu-color-surface-brand-secondary) 7%, transparent) 36%, transparent 72%), #18191C;
+  --lemu-gradient-surface-olive: linear-gradient(180deg, #1F2022 0%, #222420 55%, #272A20 100%);
+  --lemu-gradient-surface-ocean: linear-gradient(180deg, #121D23 0%, #152026 45%, #1D282E 75%, #273238 100%);
+  --lemu-gradient-surface-steel: linear-gradient(180deg, #1F2024 0%, #232428 40%, #343539 75%, #48494D 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* Card surfaces — legacy                                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-surface-base: linear-gradient(180deg, #1D1F20 0%, #17191B 100%);
+  --lemu-gradient-surface-soft: radial-gradient(58% 220% at 3% 42%, rgba(255,255,255,0.095) 0%, rgba(255,255,255,0.035) 42%, rgba(255,255,255,0.012) 100%), linear-gradient(180deg, #1D1F20 0%, #17191B 100%);
+  --lemu-gradient-surface-lime-wash: radial-gradient(56.49% 230.73% at 2.37% 40.91%, rgba(187,251,12,0.07) 0%, rgba(12,251,32,0.01) 100%), radial-gradient(41.8% 183.68% at 10.4% 53.71%, rgba(197,197,197,0.08) 0%, rgba(197,197,197,0.01) 100%), linear-gradient(180deg, #1D1F20 0%, #17191B 100%);
+  --lemu-gradient-surface-pink-wash: radial-gradient(56.49% 230.73% at 2.37% 40.91%, rgba(237,21,114,0.10) 0%, rgba(237,21,114,0.01) 100%), linear-gradient(180deg, #1D1F20 0%, #17191B 100%);
+  --lemu-gradient-surface-blue-wash: radial-gradient(56.49% 230.73% at 2.37% 40.91%, rgba(21,68,237,0.10) 0%, rgba(21,68,237,0.01) 100%), linear-gradient(180deg, #1D1F20 0%, #17191B 100%);
+  --lemu-gradient-surface-steel-flat: linear-gradient(180deg, rgba(110,145,188,0.02) 0%, rgba(110,145,188,0.20) 100%), #1C1E20;
+  --lemu-gradient-surface-plain: linear-gradient(180deg, rgb(29,31,32) 0%, rgb(23,25,27) 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* 1px mask gradient rims                                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-rim-vertical: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.09) 18%, rgba(255,255,255,0.03) 38%, rgba(255,255,255,0) 72%);
+  --lemu-gradient-rim-diagonal: linear-gradient(225deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.10) 18%, rgba(255,255,255,0.04) 42%, rgba(255,255,255,0) 76%);
+
+  /* ------------------------------------------------------------------ */
+  /* Highlight gradient borders (legacy highlighted cards)               */
+  /* Apply via 2px-padding trick (outer wrapper gradient + inner pane).  */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-border-pink: radial-gradient(86.59% 115.91% at 50% 45.45%, #FB398C 0%, #ED1572 100%);
+  --lemu-gradient-border-blue: radial-gradient(86.59% 115.91% at 50% 45.45%, #245EF1 0%, #1544ED 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* Badge pill gradients (3-stop right-side gloss pattern)              */
+  /* `73% 50%` / `85% 37%` / `12% 76%` — pills only, never card surfaces */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-pill-lime: radial-gradient(ellipse 55% 95% at 73% 50%, rgba(117,239,29,0.6) 0%, rgba(194,237,21,0) 100%), radial-gradient(ellipse 25% 42% at 85% 37%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%), radial-gradient(ellipse 33% 70% at 12% 76%, rgba(200,239,29,0.6) 0%, rgba(194,237,21,0) 100%), linear-gradient(90deg, rgb(209,254,23) 0%, rgb(209,254,23) 100%);
+  --lemu-gradient-pill-blue: radial-gradient(ellipse 75% 300% at 73% 50%, #1d63ef 0%, #5150d0 45%, rgba(237,21,114,0) 100%), radial-gradient(ellipse 30% 120% at 85% 37%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%), #0256fe;
+  --lemu-gradient-pill-ultraviolet: radial-gradient(ellipse 55% 95% at 73% 50%, rgba(29,99,239,0.6) 0%, rgba(81,80,208,0.45) 25%, rgba(133,60,176,0.3) 50%, rgba(237,21,114,0) 100%), radial-gradient(ellipse 25% 42% at 85% 37%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%), radial-gradient(ellipse 33% 70% at 12% 76%, rgba(29,99,239,0.6) 0%, rgba(133,60,176,0.3) 50%, rgba(237,21,114,0) 100%), linear-gradient(90deg, rgb(2,86,254) 0%, rgb(2,86,254) 100%);
+  --lemu-gradient-pill-pink: radial-gradient(ellipse 55% 95% at 73% 50%, rgba(239,29,186,0.6) 0%, rgba(237,21,114,0) 100%), radial-gradient(ellipse 25% 42% at 85% 37%, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%), radial-gradient(ellipse 33% 70% at 12% 76%, rgba(176,29,239,0.6) 0%, rgba(206,25,176,0.3) 50%, rgba(237,21,114,0) 100%), linear-gradient(90deg, rgb(255,0,91) 0%, rgb(255,0,91) 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* Offer / campaign                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-offer-base: radial-gradient(120% 90% at 50% 0%, #55142c 0%, #35101d 38%, #1e0c14 70%, #140a0f 100%);
+  --lemu-gradient-offer-flash: linear-gradient(0deg, rgba(255,0,91,0.32) 0%, rgba(255,0,91,0.016) 100%), linear-gradient(90deg, #0f1113 0%, #0f1113 100%);
+  --lemu-gradient-offer-dots: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+  --lemu-gradient-offer-combo: linear-gradient(135deg, #ff005b 0%, #d1004e 40%, #8b006a 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* Comparison table background                                         */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-table-cyan: radial-gradient(211% 211% at 50.16% 100%, rgba(60,140,255,0.20) 0%, rgba(60,140,255,0) 100%), radial-gradient(64.4% 64.4% at 50.16% 100%, rgba(60,216,255,0.20) 0%, rgba(60,216,255,0) 100%), rgba(255,255,255,0.05);
+
+  /* ------------------------------------------------------------------ */
+  /* Overlays                                                            */
+  /* Monthly billing: prepend to the card surface gradient.              */
+  /* ------------------------------------------------------------------ */
+  --lemu-gradient-overlay-darken: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+}

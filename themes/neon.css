@@ -1,73 +1,129 @@
 /**
- * Lemmo UI — Neon Theme (Signature Brand)
- * Features the signature Lemmo Electric Lime (#D1FE17), deep obsidian surfaces,
- * and high-contrast energetic accents.
+ * Lemmo UI — Neon Theme (Official Lemmo Brand System)
+ * Strictly aligned with Lemmo System Design tokens (System_design/docs/tokens).
+ *
+ * Primary: #D1FE17 (Lemmo Electric Lime)
+ * Secondary Accent: #FF005B (Lemmo Pink)
+ * Surface Page: #131517
+ * Surface Primary (Cards): #1C1E20
+ * Surface Secondary (Raised): #23262A
+ * Surface Tertiary (Deep): #0F1113
+ * Text Primary: #E1E1E3
+ * Text on Brand: #131517
+ * Borders: rgba(255, 255, 255, 0.1)
  */
 
-[data-theme="neon"] {
-  color-scheme: light;
-  --background: oklch(0.985 0.01 125);
-  --foreground: oklch(0.14 0.02 130);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.14 0.02 130);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.14 0.02 130);
-  --primary: oklch(0.22 0.08 135);
-  --primary-foreground: oklch(0.93 0.26 128);
-  --secondary: oklch(0.94 0.06 128);
-  --secondary-foreground: oklch(0.18 0.06 130);
-  --muted: oklch(0.95 0.015 125);
-  --muted-foreground: oklch(0.48 0.03 130);
-  --accent: oklch(0.92 0.1 128);
-  --accent-foreground: oklch(0.14 0.04 130);
-  --destructive: oklch(0.6 0.24 25);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.86 0.03 128);
-  --input: oklch(0.86 0.03 128);
-  --ring: oklch(0.6 0.2 130);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.97 0.01 125);
-  --sidebar-foreground: oklch(0.14 0.02 130);
-  --sidebar-primary: oklch(0.22 0.08 135);
-  --sidebar-primary-foreground: oklch(0.93 0.26 128);
-  --sidebar-accent: oklch(0.92 0.1 128);
-  --sidebar-accent-foreground: oklch(0.14 0.04 130);
-  --sidebar-border: oklch(0.86 0.03 128);
-  --sidebar-ring: oklch(0.6 0.2 130);
-}
-
+/* Dark mode (Default & canonical Lemmo aesthetic) */
+:root,
+[data-theme="neon"],
 .dark[data-theme="neon"],
 [data-theme="neon"].dark,
 .dark [data-theme="neon"],
 [data-theme="neon"] .dark {
   color-scheme: dark;
-  --background: oklch(0.12 0.015 135);
-  --foreground: oklch(0.96 0.02 125);
-  --card: oklch(0.16 0.02 135);
-  --card-foreground: oklch(0.96 0.02 125);
-  --popover: oklch(0.16 0.02 135);
-  --popover-foreground: oklch(0.96 0.02 125);
-  /* Lemmo Electric Lime (#D1FE17) */
-  --primary: oklch(0.93 0.26 128);
-  --primary-foreground: oklch(0.1 0.02 135);
-  --secondary: oklch(0.22 0.035 135);
-  --secondary-foreground: oklch(0.93 0.26 128);
-  --muted: oklch(0.18 0.02 135);
-  --muted-foreground: oklch(0.68 0.03 128);
-  --accent: oklch(0.25 0.06 130);
-  --accent-foreground: oklch(0.93 0.26 128);
-  --destructive: oklch(0.65 0.22 25);
-  --destructive-foreground: oklch(0.12 0.015 135);
-  --border: oklch(0.28 0.035 135);
-  --input: oklch(0.26 0.03 135);
-  --ring: oklch(0.93 0.26 128);
+
+  /* Surfaces & Canvas */
+  --background: #131517;
+  --foreground: #e1e1e3;
+  --card: #1c1e20;
+  --card-foreground: #e1e1e3;
+  --popover: #23262a;
+  --popover-foreground: #e1e1e3;
+
+  /* Brand Action (Lemmo Lime #D1FE17) */
+  --primary: #d1fe17;
+  --primary-foreground: #131517;
+  --primary-hover: #c4ee0b;
+  --primary-edge: #829b19;
+
+  /* Secondary Brand (Pink / Raised Charcoal) */
+  --secondary: #23262a;
+  --secondary-foreground: #e1e1e3;
+  --brand-pink: #ff005b;
+
+  /* Muted & Faint */
+  --muted: #18191c;
+  --muted-foreground: #898a8b;
+
+  /* Accents */
+  --accent: #23262a;
+  --accent-foreground: #d1fe17;
+
+  /* Feedback */
+  --destructive: #ff005b;
+  --destructive-foreground: #ffffff;
+  --success: #d1fe17;
+  --success-foreground: #131517;
+
+  /* Borders & Dividers */
+  --border: rgba(255, 255, 255, 0.1);
+  --border-soft: rgba(255, 255, 255, 0.04);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #d1fe17;
+
+  /* Radius (Cards: 12px / 0.75rem, Controls: 8px / 0.5rem) */
   --radius: 0.75rem;
-  --sidebar: oklch(0.14 0.018 135);
-  --sidebar-foreground: oklch(0.96 0.02 125);
-  --sidebar-primary: oklch(0.93 0.26 128);
-  --sidebar-primary-foreground: oklch(0.1 0.02 135);
-  --sidebar-accent: oklch(0.25 0.06 130);
-  --sidebar-accent-foreground: oklch(0.93 0.26 128);
-  --sidebar-border: oklch(0.28 0.035 135);
-  --sidebar-ring: oklch(0.93 0.26 128);
+
+  /* Lemmo Brand Gloss & Shadows */
+  --shadow-brand-button: inset 0 0.8px 0 0 #d1fe17, inset 0 -1.6px 0 0 #829b19, inset 0 -2.4px 0 0 #829b19, 10px 34px 24px 0px rgba(0,0,0,0.15);
+  --glow-brand: 0 0 0.4rem rgba(209, 254, 23, 0.56);
+
+  /* Sidebar */
+  --sidebar: #0f1113;
+  --sidebar-foreground: #e1e1e3;
+  --sidebar-primary: #d1fe17;
+  --sidebar-primary-foreground: #131517;
+  --sidebar-accent: #23262a;
+  --sidebar-accent-foreground: #d1fe17;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #d1fe17;
+}
+
+/* Light mode companion for Neon */
+html:not(.dark) [data-theme="neon"]:not(.dark),
+html:not(.dark)[data-theme="neon"] {
+  color-scheme: light;
+
+  --background: #f8faf5;
+  --foreground: #131517;
+  --card: #ffffff;
+  --card-foreground: #131517;
+  --popover: #ffffff;
+  --popover-foreground: #131517;
+
+  --primary: #192b03;
+  --primary-foreground: #d1fe17;
+  --primary-hover: #223805;
+  --primary-edge: #436e0a;
+
+  --secondary: #edf7cc;
+  --secondary-foreground: #192b03;
+
+  --muted: #f2f5eb;
+  --muted-foreground: #667057;
+
+  --accent: #e4f2aa;
+  --accent-foreground: #131517;
+
+  --destructive: #d1004e;
+  --destructive-foreground: #ffffff;
+
+  --border: #e0e8d3;
+  --border-soft: #edf2e4;
+  --input: #e0e8d3;
+  --ring: #739408;
+
+  --radius: 0.75rem;
+
+  --shadow-brand-button: 0 2px 8px rgba(25, 43, 3, 0.12);
+  --glow-brand: 0 0 0.4rem rgba(115, 148, 8, 0.25);
+
+  --sidebar: #f2f5eb;
+  --sidebar-foreground: #131517;
+  --sidebar-primary: #192b03;
+  --sidebar-primary-foreground: #d1fe17;
+  --sidebar-accent: #e4f2aa;
+  --sidebar-accent-foreground: #131517;
+  --sidebar-border: #e0e8d3;
+  --sidebar-ring: #739408;
 }

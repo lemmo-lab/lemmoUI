@@ -1,0 +1,19 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* System breakpoints (rem)                                            */
+  /* ------------------------------------------------------------------ */
+  --lemu-bp-base: 20rem;    /* 320 px  mobile floor */
+  --lemu-bp-sm: 40rem;      /* 640 px */
+  --lemu-bp-md: 48rem;      /* 768 px  tablet / 2-col grid */
+  --lemu-bp-lg: 64rem;      /* 1024 px */
+  --lemu-bp-xl: 80rem;      /* 1280 px desktop / 3-col grid */
+  --lemu-bp-2xl: 120rem;    /* 1920 px */
+  --lemu-bp-3xl: 158rem;    /* 2528 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic aliases                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemu-bp-tablet: var(--lemu-bp-md);
+  --lemu-bp-desktop: var(--lemu-bp-xl);
+  --lemu-bp-wide: var(--lemu-bp-2xl);
+}

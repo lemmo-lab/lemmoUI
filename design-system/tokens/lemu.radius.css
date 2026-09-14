@@ -1,0 +1,27 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Radius ladder (same quarter-rem basis as spacing)                   */
+  /* ------------------------------------------------------------------ */
+  --lemu-radius-0: 0;
+  --lemu-radius-050: .125rem;   /* 2 px */
+  --lemu-radius-100: .25rem;    /* 4 px */
+  --lemu-radius-150: .375rem;   /* 6 px */
+  --lemu-radius-200: .5rem;     /* 8 px */
+  --lemu-radius-250: .625rem;   /* 10 px */
+  --lemu-radius-300: .75rem;    /* 12 px */
+  --lemu-radius-400: 1rem;      /* 16 px */
+  --lemu-radius-500: 1.25rem;   /* 20 px */
+  --lemu-radius-600: 1.5rem;    /* 24 px */
+  --lemu-radius-full: 9999px;   /* pill */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic radius                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemu-radius-control: var(--lemu-radius-200);    /* 8 px  buttons, inputs */
+  --lemu-radius-card: var(--lemu-radius-300);       /* 12 px cards, tables, CTA */
+  --lemu-radius-badge: var(--lemu-radius-150);      /* 6 px  status badges */
+  --lemu-radius-featured-card: var(--lemu-radius-500); /* 20 px featured surfaces */
+  --lemu-radius-media: var(--lemu-radius-400);      /* 16 px media containers */
+  --lemu-radius-media-lg: var(--lemu-radius-600);   /* 24 px large media */
+  --lemu-radius-pill: var(--lemu-radius-full);      /* full round */
+}

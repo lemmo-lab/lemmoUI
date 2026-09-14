@@ -23,11 +23,12 @@ export function SiteHeader() {
       <div className="mx-auto flex h-14 max-w-[1440px] items-center justify-between px-4 lg:px-8">
         <div className="flex items-center gap-8">
           <a href="/"><Logo /></a>
-          <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
-            <a className="text-foreground transition-colors hover:text-foreground" href="/#docs">Docs</a>
+          <nav className="hidden items-center gap-5 text-sm text-muted-foreground md:flex">
+            <a className="transition-colors hover:text-foreground" href="/#docs">Docs</a>
+            <a className="transition-colors hover:text-foreground" href="/design-system">Design System</a>
             <a className="transition-colors hover:text-foreground" href="/#themes">Themes</a>
+            <a className="transition-colors hover:text-foreground" href="/changelog">Changelog</a>
             <a className="transition-colors hover:text-foreground" href="/discovery">Components</a>
-            <a className="transition-colors hover:text-foreground" href="/#installation">Install</a>
           </nav>
         </div>
 
@@ -61,9 +62,10 @@ export function SiteHeader() {
           </div>
           <nav className="flex flex-col gap-3 text-sm">
             <a href="/#docs" onClick={() => setOpen(false)}>Docs</a>
+            <a href="/design-system" onClick={() => setOpen(false)}>Design System</a>
             <a href="/#themes" onClick={() => setOpen(false)}>Themes</a>
+            <a href="/changelog" onClick={() => setOpen(false)}>Changelog</a>
             <a href="/discovery" onClick={() => setOpen(false)}>Components</a>
-            <a href="/#installation" onClick={() => setOpen(false)}>Install</a>
           </nav>
         </div>
       )}

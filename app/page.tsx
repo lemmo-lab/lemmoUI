@@ -31,6 +31,7 @@ import { LemmoMark } from '@/components/icons'
 
 const sections = [
   { label: 'Architecture', items: ['Core Concept', 'Swappable Themes', 'Design Tokens'] },
+  { label: 'Foundation', items: ['Design System', 'Changelog'] },
   { label: 'Components', items: ['Button', 'Card', 'Badge', 'Alert'] },
   { label: 'Integration', items: ['Installation', 'Usage Guide'] },
 ]
@@ -62,15 +63,23 @@ export default function Page() {
                 <div key={section.label}>
                   <p className="mb-2 text-sm font-medium">{section.label}</p>
                   <div className="flex flex-col gap-1">
-                    {section.items.map((item) => (
-                      <a
-                        key={item}
-                        href={`#${item.toLowerCase().replaceAll(' ', '-')}`}
-                        className="rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                      >
-                        {item}
-                      </a>
-                    ))}
+                    {section.items.map((item) => {
+                      const href =
+                        item === 'Design System'
+                          ? '/design-system'
+                          : item === 'Changelog'
+                          ? '/changelog'
+                          : `#${item.toLowerCase().replaceAll(' ', '-')}`
+                      return (
+                        <a
+                          key={item}
+                          href={href}
+                          className="rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                        >
+                          {item}
+                        </a>
+                      )
+                    })}
                   </div>
                 </div>
               ))}
@@ -179,6 +188,9 @@ export default function Page() {
                     </code>
                   </div>
                 </div>
+
+                {/* Theme Selector Cards */}
+                <ThemeSwitcher variant="expanded" />
 
                 {/* Live Components Grid */}
                 <div className="grid gap-6 md:grid-cols-2">

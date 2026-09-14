@@ -13,7 +13,8 @@
     },
     "./styles.css": "./app/globals.css",
     "./themes": "./themes/index.css",
-    "./themes/*": "./themes/*"
+    "./themes/*": "./themes/*",
+    "./design-system/*": "./design-system/*"
   },
   "scripts": {
     "dev": "next dev",

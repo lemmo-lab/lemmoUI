@@ -1,0 +1,54 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Controls                                                           */
+  /* ------------------------------------------------------------------ */
+  --lemu-size-control-xs: 2rem;      /* 32 px */
+  --lemu-size-control-sm: 2.25rem;   /* 36 px */
+  --lemu-size-control-md: 2.5rem;    /* 40 px */
+  --lemu-size-control-lg: 2.75rem;   /* 44 px — primary CTA */
+  --lemu-size-control-xl: 3rem;      /* 48 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Icons                                                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-size-icon-xs: .75rem;       /* 12 px */
+  --lemu-size-icon-sm: 1rem;         /* 16 px — feature checks, row icons */
+  --lemu-size-icon-md: 1.25rem;      /* 20 px */
+  --lemu-size-icon-lg: 1.5rem;       /* 24 px */
+  --lemu-size-icon-xl: 1.75rem;      /* 28 px — carousel arrows */
+
+  /* ------------------------------------------------------------------ */
+  /* Header                                                             */
+  /* ------------------------------------------------------------------ */
+  --lemu-size-header: 3.25rem;       /* 52 px */
+  --lemu-size-header-compact: 2.25rem; /* 36 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Containers (max-widths)                                            */
+  /* ------------------------------------------------------------------ */
+  --lemu-size-gutter: 1rem;                         /* mobile container gutters */
+  --lemu-size-container-base: 100%;                 /* base width */
+  --lemu-size-container-sm: 40rem;                  /* 640 px */
+  --lemu-size-container-md: 48rem;                  /* 768 px */
+  --lemu-size-container-lg: 64rem;                  /* 1024 px */
+  --lemu-size-container-xl: 80rem;                  /* 1280 px */
+  --lemu-size-container-2xl: 120rem;                /* 1920 px */
+  --lemu-size-container-3xl: 158rem;                /* 2528 px */
+  --lemu-size-container-media: calc(100vw - 2rem);  /* media strips */
+
+  /* Content caps */
+  --lemu-size-container-copy: 80rem;    /* max-w-7xl */
+  --lemu-size-container-content: 56rem; /* max-w-4xl */
+  --lemu-size-container-wide: 96rem;    /* max-w-8xl */
+
+  /* ------------------------------------------------------------------ */
+  /* Pricing column (Optional — conversion)                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-size-column-sm: 66.5rem;                /* 1064 px standard column */
+  --lemu-size-column-lg: 89rem;                  /* 1424 px wide variant */
+  --lemu-size-max-default: 90rem;                /* 1440 px outer shell */
+  --lemu-size-max-wide: 92rem;                   /* 1472 px wide shell */
+  --lemu-size-pricing-pad-x: 1rem;               /* mobile gutters */
+  --lemu-size-pricing-pad-x-lg: 3.75rem;         /* ≥768px gutters */
+  --lemu-size-pricing-pad-y: 2rem;               /* vertical rhythm */
+}

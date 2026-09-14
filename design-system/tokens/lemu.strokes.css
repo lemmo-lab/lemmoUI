@@ -1,0 +1,18 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Stroke (border) widths                                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-stroke-none: 0;
+  --lemu-stroke-hairline: .5px;
+  --lemu-stroke-thin: 1px;
+  --lemu-stroke-medium: 1.5px;
+  --lemu-stroke-thick: 2px;
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic strokes                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemu-stroke-rim: var(--lemu-stroke-thin);   /* 1px mask-gradient rim (cards) */
+  --lemu-stroke-border: var(--lemu-stroke-thin); /* 1px hairline borders         */
+  --lemu-stroke-border-gradient: var(--lemu-stroke-thick); /* 2px pad trick, highlighted cards */
+  --lemu-stroke-divider: var(--lemu-stroke-hairline); /* table separators         */
+}

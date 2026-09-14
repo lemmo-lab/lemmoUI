@@ -1,0 +1,87 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Families (Brand-specific — substitute yours, keep the scale)        */
+  /* ------------------------------------------------------------------ */
+  --lemu-font-body: "Inter";
+  --lemu-font-display: "Inter Display";
+  --lemu-font-heading: "Space Grotesk";
+  --lemu-font-serif: "Instrument Serif";
+  --lemu-font-mono: "IBM Plex Mono";
+
+  /* ------------------------------------------------------------------ */
+  /* Weights                                                             */
+  /* ------------------------------------------------------------------ */
+  --lemu-font-weight-regular: 400;
+  --lemu-font-weight-medium: 500;
+  --lemu-font-weight-semi-bold: 600;
+  --lemu-font-weight-bold: 700;
+  --lemu-font-weight-black: 900;
+  --lemu-font-weight-cta: 510;   /* Space Grotesk: medium→semibold, CTA buttons */
+
+  /* ------------------------------------------------------------------ */
+  /* Type size ladder (rem)                                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-type-size-050: .625rem;    /* 10 px */
+  --lemu-type-size-100: .75rem;     /* 12 px */
+  --lemu-type-size-200: .875rem;    /* 14 px — body default */
+  --lemu-type-size-300: 1rem;       /* 16 px */
+  --lemu-type-size-400: 1.125rem;   /* 18 px */
+  --lemu-type-size-500: 1.25rem;    /* 20 px */
+  --lemu-type-size-600: 1.5rem;     /* 24 px */
+  --lemu-type-size-700: 1.75rem;    /* 28 px */
+  --lemu-type-size-800: 2rem;       /* 32 px */
+  --lemu-type-size-900: 2.25rem;    /* 36 px */
+  --lemu-type-size-1000: 2.5rem;    /* 40 px */
+  --lemu-type-size-1100: 3rem;      /* 48 px */
+  --lemu-type-size-1200: 3.5rem;    /* 56 px */
+  --lemu-type-size-1300: 4rem;      /* 64 px — hero h-xl */
+  --lemu-type-size-1400: 4.5rem;    /* 72 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Line heights (absolute rem, not unitless)                           */
+  /* ------------------------------------------------------------------ */
+  --lemu-type-leading-300: 1rem;          /* 16 px */
+  --lemu-type-leading-400: 1.125rem;      /* 18 px */
+  --lemu-type-leading-500: 1.25rem;       /* 20 px — body default */
+  --lemu-type-leading-600: 1.5rem;        /* 24 px */
+  --lemu-type-leading-700: 1.75rem;       /* 28 px */
+  --lemu-type-leading-800: 2rem;          /* 32 px */
+  --lemu-type-leading-900: 2.25rem;       /* 36 px */
+  --lemu-type-leading-1000: 2.5rem;       /* 40 px */
+  --lemu-type-leading-1100: 2.75rem;      /* 44 px — derived */
+  --lemu-type-leading-1200: 3rem;         /* 48 px — derived */
+  --lemu-type-leading-1300: 4rem;         /* 64 px — derived */
+  --lemu-type-leading-1400: 4.5rem;       /* 72 px — derived */
+
+  /* ------------------------------------------------------------------ */
+  /* Letter spacing                                                      */
+  /* ------------------------------------------------------------------ */
+  --lemu-type-track-none: 0;
+  --lemu-type-track-slight: -0.025rem;     /* fine label compression */
+  --lemu-type-track-tight: -0.075rem;      /* tight captions */
+  --lemu-type-track-loose: 0.00625rem;     /* body default drift */
+  --lemu-type-track-wide: 0.0125rem;       /* wide-set labels */
+  --lemu-type-track-xxs: -0.3px;           /* 10px badge/semibold */
+  --lemu-type-track-5xl: -1.2px;           /* 48px display */
+  --lemu-type-track-heading: -2%;          /* h-xl hero */
+  --lemu-type-track-caps: -4%;             /* caps-bold */
+  --lemu-type-track-label: 0.2px;          /* gloss badge text */
+  --lemu-type-track-caption: 0.08rem;      /* uppercase savings banner */
+  --lemu-type-track-table-head: -0.56px;   /* table header (Space Grotesk bold) */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic sizes (composition reference)                              */
+  /*   text-xxs    = size-050 · leading 14px · 600 · track -0.3px        */
+  /*   text-xs     = size-100 · leading 18px · 500                       */
+  /*   text-sm     = size-200 · leading 20px                             */
+  /*   text-sm-semi= size-200 · leading 21px · 500 · track -0.01em       */
+  /*   text-base   = size-300 · leading 24px                             */
+  /*   text-lg     = size-400 · leading 28px                             */
+  /*   text-2xl    = size-600 · leading 32px                             */
+  /*   text-3xl    = size-900 · 500 · 36px                               */
+  /*   text-5xl    = size-1100 · 500 · leading 52px · track -1.2px       */
+  /*   h-xl (brand)= size-1300 · leading 72px · 500→700 · track -2%      */
+  /*   caps-bold   = size 48/64 · bold · track -4% · uppercase            */
+  /* Body default = size-200 · leading-500 · weight-regular · track-loose */
+  /* ------------------------------------------------------------------ */
+}

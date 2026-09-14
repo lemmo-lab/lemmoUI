@@ -1,0 +1,28 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Durations                                                          */
+  /* ------------------------------------------------------------------ */
+  --lemu-duration-fast: 100ms;      /* progress fill, micro-ticks */
+  --lemu-duration-normal: 200ms;    /* toggle thumb, hover states */
+  --lemu-duration-slow: 300ms;      /* card border/color transitions */
+  --lemu-duration-slower: 500ms;    /* legacy card transitions */
+  --lemu-duration-slider: 150ms;    /* credit slider (width/left) */
+  --lemu-duration-plan-swap: 420ms; /* plan swap enter/exit */
+  --lemu-duration-breathe: 1.8s;    /* slider-tick breathe (infinite) */
+
+  /* ------------------------------------------------------------------ */
+  /* Eases — verified against the reference                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-ease-out: ease-out;                                 /* cards (300/500ms) */
+  --lemu-ease-in-out: ease-in-out;                           /* breathe (1.8s) */
+  --lemu-ease-snap: cubic-bezier(0.77, 0, 0.175, 1);         /* plan swap (0.42s) */
+
+  /* ------------------------------------------------------------------ */
+  /* Eases — named in the scale; curve is an estimate (verified names)   */
+  /* ------------------------------------------------------------------ */
+  --lemu-ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --lemu-ease-swift: cubic-bezier(0.55, 0, 0.1, 1);
+  --lemu-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --lemu-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --lemu-ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+}

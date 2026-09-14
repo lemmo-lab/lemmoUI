@@ -1,0 +1,82 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Page & app backgrounds                                              */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-page-primary: #131517;        /* standard page background */
+  --lemu-color-app-background: #131416;      /* app shell background      */
+  --lemu-color-surface-tertiary: #0f1113;    /* deepest surface (pricing page bg) */
+  --lemu-color-surface-primary: #1c1e20;     /* card / panel surface      */
+  --lemu-color-surface-secondary: #23262a;   /* raised surface            */
+  --lemu-color-surface-elevated: #18191c;    /* gradient base (elevated-end) */
+  --lemu-color-surface-glass: rgba(15, 17, 19, 0.88); /* glass card      */
+
+  /* ------------------------------------------------------------------ */
+  /* Brand surfaces (semantic roles, not page names)                     */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-surface-brand: #d1fe17;          /* primary action (lime)  */
+  --lemu-color-surface-brand-hover: #c4ee0b;    /* primary action hover   */
+  --lemu-color-surface-brand-edge: #829b19;     /* primary action inset   */
+  --lemu-color-surface-brand-secondary: #ff005b;/* secondary accent (pink)*/
+
+  /* ------------------------------------------------------------------ */
+  /* Font / text colors                                                  */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-font-primary: #e1e1e3;
+  --lemu-color-font-secondary: #a1a1a5;
+  --lemu-color-font-muted: #898a8b;
+  --lemu-color-font-faint: #737475;
+  --lemu-color-font-on-brand: #131517;       /* dark text on lime        */
+  --lemu-color-font-reverted: #060515;       /* near-black reverted      */
+  --lemu-color-font-reverted-80: rgba(6, 5, 21, 0.8);
+  --lemu-color-font-reverted-50: rgba(6, 5, 21, 0.5);
+  --lemu-color-font-reverted-30: rgba(6, 5, 21, 0.3);
+
+  /* ------------------------------------------------------------------ */
+  /* Brand accent palette                                                */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-brand-lime: #d1fe17;
+  --lemu-color-brand-lime-hover: #c4ee0b;
+  --lemu-color-brand-lime-edge: #829b19;
+  --lemu-color-brand-pink: #ff005b;
+  --lemu-color-brand-pink-light: #fb398c;
+  --lemu-color-brand-pink-deep: #ed1572;
+  --lemu-color-brand-pink-maroon: #d1004e;
+  --lemu-color-brand-pink-base: #8b006a;
+  --lemu-color-brand-blue: #0256fe;
+  --lemu-color-brand-blue-light: #245ef1;
+  --lemu-color-brand-blue-deep: #1544ed;
+  --lemu-color-brand-blue-overlay-a: #1d63ef;
+  --lemu-color-brand-blue-overlay-b: #5150d0;
+  --lemu-color-brand-cyan: #3c8cff;
+  --lemu-color-brand-cyan-soft: #9ce6f3;
+  --lemu-color-brand-cyan-glow: #3cd8ff;
+  --lemu-color-brand-violet: #853cb0;
+  --lemu-color-brand-violet-deep: #b02df2;
+
+  /* ------------------------------------------------------------------ */
+  /* Border / separator colors                                           */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-separator-card: rgba(217, 217, 217, 0.04);
+  --lemu-color-separator-strong: rgba(255, 255, 255, 0.1);
+  --lemu-color-border-soft: rgba(255, 255, 255, 0.04);
+  --lemu-color-border-mid: rgba(255, 255, 255, 0.05);
+  --lemu-color-border-strong: rgba(255, 255, 255, 0.1);
+  --lemu-color-border-ghost-light: rgba(6, 5, 21, 0.04);
+
+  /* ------------------------------------------------------------------ */
+  /* Alpha overlays (white / black steps)                                */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-white-alpha-4: rgba(255, 255, 255, 0.04);
+  --lemu-color-white-alpha-5: rgba(255, 255, 255, 0.05);
+  --lemu-color-white-alpha-8: rgba(255, 255, 255, 0.08);
+  --lemu-color-white-alpha-10: rgba(255, 255, 255, 0.1);
+  --lemu-color-white-alpha-15: rgba(255, 255, 255, 0.15);
+  --lemu-color-white-alpha-20: rgba(255, 255, 255, 0.2);
+  --lemu-color-white-alpha-30: rgba(255, 255, 255, 0.3);
+  --lemu-color-white-alpha-50: rgba(255, 255, 255, 0.5);
+  --lemu-color-white-alpha-70: rgba(255, 255, 255, 0.7);
+  --lemu-color-black-alpha-4: rgba(0, 0, 0, 0.04);
+  --lemu-color-black-alpha-7: rgba(0, 0, 0, 0.07);
+  --lemu-color-black-alpha-20: rgba(0, 0, 0, 0.2);
+  --lemu-color-black-alpha-24: rgba(0, 0, 0, 0.24);
+}
