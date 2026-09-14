@@ -1,70 +1,54 @@
-# Lemu Design Tokens
+# Lemmo Design Tokens
 
-Design token files for the **Lemu** product. Every token is written under the Lemu
-namespace (`--lemu-*`) — no third-party names, no page-specific names. Values are
-evidence-derived from the reverse-engineered system and converted to Lemu's own
-vocabulary.
+Design token files for the **Lemmo** product. Every token is written under the Lemmo
+namespace (`--lemmo-*`) with backwards compatibility aliases (`--lemu-*`). No third-party names, no page-specific names. Values are
+derived directly from the design system specifications.
 
 ## How to use
 
 - All tokens are CSS custom properties declared on `:root`.
 - Import the files in dependency order (a file references tokens from earlier files):
-  1. `lemu.colors.css`
-  2. `lemu.gradients.css`
-  3. `lemu.spacing.css`
-  4. `lemu.typography.css`
-  5. `lemu.radius.css`
-  6. `lemu.strokes.css`
-  7. `lemu.sizes.css`
-  8. `lemu.breakpoints.css`
-  9. `lemu.motion.css`
-  10. `lemu.elevation.css`
-- Or import everything with: `@import "lemu.tokens.css";`
+  1. `lemmo.colors.css`
+  2. `lemmo.gradients.css`
+  3. `lemmo.spacing.css`
+  4. `lemmo.typography.css`
+  5. `lemmo.radius.css`
+  6. `lemmo.strokes.css`
+  7. `lemmo.sizes.css`
+  8. `lemmo.breakpoints.css`
+  9. `lemmo.motion.css`
+  10. `lemmo.elevation.css`
+- Or import everything with: `@import "lemmo.tokens.css";` (or `@import "lemu.tokens.css";` for legacy projects)
 
 ## Naming conventions
 
 | Pattern | Example | Meaning |
 |---|---|---|
-| `--lemu-color-*` | `--lemu-color-surface-primary` | colors (page/surface/font/brand/border) |
-| `--lemu-gradient-*` | `--lemu-gradient-surface-featured` | gradients (surfaces / rims / pills / offers) |
-| `--lemu-space-*` | `--lemu-space-400` | the 4 px spacing ladder (050–2400) |
-| `--lemu-gap-*` | `--lemu-gap-2` | gap between elements |
-| `--lemu-font-*` / `--lemu-type-*` | `--lemu-font-display` | families / type scale |
-| `--lemu-radius-*` | `--lemu-radius-card` | radius set |
-| `--lemu-stroke-*` | `--lemu-stroke-thin` | border widths |
-| `--lemu-size-*` | `--lemu-size-control-md` | fixed dimensions (controls, icons, header) |
-| `--lemu-bp-*` | `--lemu-bp-md` | system breakpoints |
-| `--lemu-duration-*` / `--lemu-ease-*` | `--lemu-ease-emphasized` | motion |
-| `--lemu-shadow-*` | `--lemu-shadow-card-featured` | elevation / gloss |
-
-## Semantic roles (mapped from the analyzed system)
-
-Reusable, page-type-independent roles — used instead of page names:
-
-| Role | Used for |
-|---|---|
-| `surface-primary/secondary/tertiary` | page & panel backgrounds |
-| `surface-brand` | the single primary-action color |
-| `surface-featured` | a highlighted/featured surface |
-| `brand-*` | accent palette (lime, pink, blue, cyan, ultraviolet) |
-| `font-*` | text steps (primary/secondary/muted/faint/on-brand/reverted) |
-| `separator-*` | hairlines & borders |
-| containers `copy/content/media/wide` | max-widths |
-| `control` heights | buttons, inputs, chips |
-| eases/durations | motion |
+| `--lemmo-color-*` | `--lemmo-color-surface-primary` | colors (page/surface/font/brand/border) |
+| `--lemmo-gradient-*` | `--lemmo-gradient-surface-featured` | gradients (surfaces / rims / pills / offers) |
+| `--lemmo-space-*` | `--lemmo-space-400` | the 4 px spacing ladder (050–2400) |
+| `--lemmo-gap-*` | `--lemmo-gap-2` | gap between elements |
+| `--lemmo-font-*` / `--lemmo-type-*` | `--lemmo-font-display` | families / type scale |
+| `--lemmo-radius-*` | `--lemmo-radius-card` | radius set |
+| `--lemmo-stroke-*` | `--lemmo-stroke-thin` | border widths |
+| `--lemmo-size-*` | `--lemmo-size-control-md` | fixed dimensions (controls, icons, header) |
+| `--lemmo-bp-*` | `--lemmo-bp-md` | system breakpoints |
+| `--lemmo-duration-*` / `--lemmo-ease-*` | `--lemmo-ease-emphasized` | motion |
+| `--lemmo-shadow-*` | `--lemmo-shadow-card-featured` | elevation / gloss |
 
 ## File contents (all token values)
 
 | Category | File |
 |---|---|
-| Colors | [`lemu.colors.css`](lemu.colors.css) |
-| Gradients | [`lemu.gradients.css`](lemu.gradients.css) |
-| Spacing & rhythm | [`lemu.spacing.css`](lemu.spacing.css) |
-| Typography | [`lemu.typography.css`](lemu.typography.css) |
-| Radius | [`lemu.radius.css`](lemu.radius.css) |
-| Strokes (borders) | [`lemu.strokes.css`](lemu.strokes.css) |
-| Sizes & dimensions | [`lemu.sizes.css`](lemu.sizes.css) |
-| Breakpoints | [`lemu.breakpoints.css`](lemu.breakpoints.css) |
-| Motion | [`lemu.motion.css`](lemu.motion.css) |
-| Elevation & gloss | [`lemu.elevation.css`](lemu.elevation.css) |
-| Combined entry point | [`lemu.tokens.css`](lemu.tokens.css) |
+| Colors | [`lemmo.colors.css`](lemmo.colors.css) |
+| Gradients | [`lemmo.gradients.css`](lemmo.gradients.css) |
+| Spacing & rhythm | [`lemmo.spacing.css`](lemmo.spacing.css) |
+| Typography | [`lemmo.typography.css`](lemmo.typography.css) |
+| Radius | [`lemmo.radius.css`](lemmo.radius.css) |
+| Strokes (borders) | [`lemmo.strokes.css`](lemmo.strokes.css) |
+| Sizes & dimensions | [`lemmo.sizes.css`](lemmo.sizes.css) |
+| Breakpoints | [`lemmo.breakpoints.css`](lemmo.breakpoints.css) |
+| Motion | [`lemmo.motion.css`](lemmo.motion.css) |
+| Elevation & gloss | [`lemmo.elevation.css`](lemmo.elevation.css) |
+| Combined entry point | [`lemmo.tokens.css`](lemmo.tokens.css) |
+| TypeScript tokens | [`index.ts`](index.ts) |

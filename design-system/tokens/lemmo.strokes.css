@@ -1,0 +1,29 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Stroke (border) widths                                              */
+  /* ------------------------------------------------------------------ */
+  --lemmo-stroke-none: 0;
+  --lemmo-stroke-hairline: .5px;
+  --lemmo-stroke-thin: 1px;
+  --lemmo-stroke-medium: 1.5px;
+  --lemmo-stroke-thick: 2px;
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic strokes                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemmo-stroke-rim: var(--lemmo-stroke-thin);   /* 1px mask-gradient rim (cards) */
+  --lemmo-stroke-border: var(--lemmo-stroke-thin); /* 1px hairline borders         */
+  --lemmo-stroke-border-gradient: var(--lemmo-stroke-thick); /* 2px pad trick, highlighted cards */
+  --lemmo-stroke-divider: var(--lemmo-stroke-hairline); /* table separators         */
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-stroke-border: var(--lemmo-stroke-border);
+  --lemu-stroke-border-gradient: var(--lemmo-stroke-border-gradient);
+  --lemu-stroke-divider: var(--lemmo-stroke-divider);
+  --lemu-stroke-hairline: var(--lemmo-stroke-hairline);
+  --lemu-stroke-medium: var(--lemmo-stroke-medium);
+  --lemu-stroke-none: var(--lemmo-stroke-none);
+  --lemu-stroke-rim: var(--lemmo-stroke-rim);
+  --lemu-stroke-thick: var(--lemmo-stroke-thick);
+  --lemu-stroke-thin: var(--lemmo-stroke-thin);
+}

@@ -1,0 +1,139 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Families (Brand-specific — substitute yours, keep the scale)        */
+  /* ------------------------------------------------------------------ */
+  --lemmo-font-body: "Inter";
+  --lemmo-font-display: "Inter Display";
+  --lemmo-font-heading: "Space Grotesk";
+  --lemmo-font-serif: "Instrument Serif";
+  --lemmo-font-mono: "IBM Plex Mono";
+
+  /* ------------------------------------------------------------------ */
+  /* Weights                                                             */
+  /* ------------------------------------------------------------------ */
+  --lemmo-font-weight-regular: 400;
+  --lemmo-font-weight-medium: 500;
+  --lemmo-font-weight-semi-bold: 600;
+  --lemmo-font-weight-bold: 700;
+  --lemmo-font-weight-black: 900;
+  --lemmo-font-weight-cta: 510;   /* Space Grotesk: medium→semibold, CTA buttons */
+
+  /* ------------------------------------------------------------------ */
+  /* Type size ladder (rem)                                              */
+  /* ------------------------------------------------------------------ */
+  --lemmo-type-size-050: .625rem;    /* 10 px */
+  --lemmo-type-size-100: .75rem;     /* 12 px */
+  --lemmo-type-size-200: .875rem;    /* 14 px — body default */
+  --lemmo-type-size-300: 1rem;       /* 16 px */
+  --lemmo-type-size-400: 1.125rem;   /* 18 px */
+  --lemmo-type-size-500: 1.25rem;    /* 20 px */
+  --lemmo-type-size-600: 1.5rem;     /* 24 px */
+  --lemmo-type-size-700: 1.75rem;    /* 28 px */
+  --lemmo-type-size-800: 2rem;       /* 32 px */
+  --lemmo-type-size-900: 2.25rem;    /* 36 px */
+  --lemmo-type-size-1000: 2.5rem;    /* 40 px */
+  --lemmo-type-size-1100: 3rem;      /* 48 px */
+  --lemmo-type-size-1200: 3.5rem;    /* 56 px */
+  --lemmo-type-size-1300: 4rem;      /* 64 px — hero h-xl */
+  --lemmo-type-size-1400: 4.5rem;    /* 72 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Line heights (absolute rem, not unitless)                           */
+  /* ------------------------------------------------------------------ */
+  --lemmo-type-leading-300: 1rem;          /* 16 px */
+  --lemmo-type-leading-400: 1.125rem;      /* 18 px */
+  --lemmo-type-leading-500: 1.25rem;       /* 20 px — body default */
+  --lemmo-type-leading-600: 1.5rem;        /* 24 px */
+  --lemmo-type-leading-700: 1.75rem;       /* 28 px */
+  --lemmo-type-leading-800: 2rem;          /* 32 px */
+  --lemmo-type-leading-900: 2.25rem;       /* 36 px */
+  --lemmo-type-leading-1000: 2.5rem;       /* 40 px */
+  --lemmo-type-leading-1100: 2.75rem;      /* 44 px — derived */
+  --lemmo-type-leading-1200: 3rem;         /* 48 px — derived */
+  --lemmo-type-leading-1300: 4rem;         /* 64 px — derived */
+  --lemmo-type-leading-1400: 4.5rem;       /* 72 px — derived */
+
+  /* ------------------------------------------------------------------ */
+  /* Letter spacing                                                      */
+  /* ------------------------------------------------------------------ */
+  --lemmo-type-track-none: 0;
+  --lemmo-type-track-slight: -0.025rem;     /* fine label compression */
+  --lemmo-type-track-tight: -0.075rem;      /* tight captions */
+  --lemmo-type-track-loose: 0.00625rem;     /* body default drift */
+  --lemmo-type-track-wide: 0.0125rem;       /* wide-set labels */
+  --lemmo-type-track-xxs: -0.3px;           /* 10px badge/semibold */
+  --lemmo-type-track-5xl: -1.2px;           /* 48px display */
+  --lemmo-type-track-heading: -2%;          /* h-xl hero */
+  --lemmo-type-track-caps: -4%;             /* caps-bold */
+  --lemmo-type-track-label: 0.2px;          /* gloss badge text */
+  --lemmo-type-track-caption: 0.08rem;      /* uppercase savings banner */
+  --lemmo-type-track-table-head: -0.56px;   /* table header (Space Grotesk bold) */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic sizes (composition reference)                              */
+  /*   text-xxs    = size-050 · leading 14px · 600 · track -0.3px        */
+  /*   text-xs     = size-100 · leading 18px · 500                       */
+  /*   text-sm     = size-200 · leading 20px                             */
+  /*   text-sm-semi= size-200 · leading 21px · 500 · track -0.01em       */
+  /*   text-base   = size-300 · leading 24px                             */
+  /*   text-lg     = size-400 · leading 28px                             */
+  /*   text-2xl    = size-600 · leading 32px                             */
+  /*   text-3xl    = size-900 · 500 · 36px                               */
+  /*   text-5xl    = size-1100 · 500 · leading 52px · track -1.2px       */
+  /*   h-xl (brand)= size-1300 · leading 72px · 500→700 · track -2%      */
+  /*   caps-bold   = size 48/64 · bold · track -4% · uppercase            */
+  /* Body default = size-200 · leading-500 · weight-regular · track-loose */
+  /* ------------------------------------------------------------------ */
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-font-body: var(--lemmo-font-body);
+  --lemu-font-display: var(--lemmo-font-display);
+  --lemu-font-heading: var(--lemmo-font-heading);
+  --lemu-font-mono: var(--lemmo-font-mono);
+  --lemu-font-serif: var(--lemmo-font-serif);
+  --lemu-font-weight-black: var(--lemmo-font-weight-black);
+  --lemu-font-weight-bold: var(--lemmo-font-weight-bold);
+  --lemu-font-weight-cta: var(--lemmo-font-weight-cta);
+  --lemu-font-weight-medium: var(--lemmo-font-weight-medium);
+  --lemu-font-weight-regular: var(--lemmo-font-weight-regular);
+  --lemu-font-weight-semi-bold: var(--lemmo-font-weight-semi-bold);
+  --lemu-type-leading-1000: var(--lemmo-type-leading-1000);
+  --lemu-type-leading-1100: var(--lemmo-type-leading-1100);
+  --lemu-type-leading-1200: var(--lemmo-type-leading-1200);
+  --lemu-type-leading-1300: var(--lemmo-type-leading-1300);
+  --lemu-type-leading-1400: var(--lemmo-type-leading-1400);
+  --lemu-type-leading-300: var(--lemmo-type-leading-300);
+  --lemu-type-leading-400: var(--lemmo-type-leading-400);
+  --lemu-type-leading-500: var(--lemmo-type-leading-500);
+  --lemu-type-leading-600: var(--lemmo-type-leading-600);
+  --lemu-type-leading-700: var(--lemmo-type-leading-700);
+  --lemu-type-leading-800: var(--lemmo-type-leading-800);
+  --lemu-type-leading-900: var(--lemmo-type-leading-900);
+  --lemu-type-size-050: var(--lemmo-type-size-050);
+  --lemu-type-size-100: var(--lemmo-type-size-100);
+  --lemu-type-size-1000: var(--lemmo-type-size-1000);
+  --lemu-type-size-1100: var(--lemmo-type-size-1100);
+  --lemu-type-size-1200: var(--lemmo-type-size-1200);
+  --lemu-type-size-1300: var(--lemmo-type-size-1300);
+  --lemu-type-size-1400: var(--lemmo-type-size-1400);
+  --lemu-type-size-200: var(--lemmo-type-size-200);
+  --lemu-type-size-300: var(--lemmo-type-size-300);
+  --lemu-type-size-400: var(--lemmo-type-size-400);
+  --lemu-type-size-500: var(--lemmo-type-size-500);
+  --lemu-type-size-600: var(--lemmo-type-size-600);
+  --lemu-type-size-700: var(--lemmo-type-size-700);
+  --lemu-type-size-800: var(--lemmo-type-size-800);
+  --lemu-type-size-900: var(--lemmo-type-size-900);
+  --lemu-type-track-5xl: var(--lemmo-type-track-5xl);
+  --lemu-type-track-caps: var(--lemmo-type-track-caps);
+  --lemu-type-track-caption: var(--lemmo-type-track-caption);
+  --lemu-type-track-heading: var(--lemmo-type-track-heading);
+  --lemu-type-track-label: var(--lemmo-type-track-label);
+  --lemu-type-track-loose: var(--lemmo-type-track-loose);
+  --lemu-type-track-none: var(--lemmo-type-track-none);
+  --lemu-type-track-slight: var(--lemmo-type-track-slight);
+  --lemu-type-track-table-head: var(--lemmo-type-track-table-head);
+  --lemu-type-track-tight: var(--lemmo-type-track-tight);
+  --lemu-type-track-wide: var(--lemmo-type-track-wide);
+  --lemu-type-track-xxs: var(--lemmo-type-track-xxs);
+}

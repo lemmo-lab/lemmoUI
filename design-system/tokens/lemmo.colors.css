@@ -1,0 +1,180 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Page & app backgrounds                                              */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-page-primary: #131517;        /* standard page background */
+  --lemmo-color-app-background: #131416;      /* app shell background      */
+  --lemmo-color-surface-tertiary: #0f1113;    /* deepest surface (pricing page bg) */
+  --lemmo-color-surface-primary: #1c1e20;     /* card / panel surface      */
+  --lemmo-color-surface-secondary: #23262a;   /* raised surface            */
+  --lemmo-color-surface-elevated: #18191c;    /* gradient base (elevated-end) */
+  --lemmo-color-surface-glass: rgba(15, 17, 19, 0.88); /* glass card      */
+
+  /* ------------------------------------------------------------------ */
+  /* Brand surfaces (semantic roles, not page names)                     */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-surface-brand: #d1fe17;          /* primary action (lime)  */
+  --lemmo-color-surface-brand-hover: #c4ee0b;    /* primary action hover   */
+  --lemmo-color-surface-brand-edge: #829b19;     /* primary action inset   */
+  --lemmo-color-surface-brand-secondary: #ff005b;/* secondary accent (pink)*/
+
+  /* ------------------------------------------------------------------ */
+  /* Font / text colors                                                  */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-font-primary: #e1e1e3;
+  --lemmo-color-font-secondary: #a1a1a5;
+  --lemmo-color-font-muted: #898a8b;
+  --lemmo-color-font-faint: #737475;
+  --lemmo-color-font-on-brand: #131517;       /* dark text on lime        */
+  --lemmo-color-font-reverted: #060515;       /* near-black reverted      */
+  --lemmo-color-font-reverted-80: rgba(6, 5, 21, 0.8);
+  --lemmo-color-font-reverted-50: rgba(6, 5, 21, 0.5);
+  --lemmo-color-font-reverted-30: rgba(6, 5, 21, 0.3);
+
+  /* ------------------------------------------------------------------ */
+  /* Brand accent palette                                                */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-brand-lime: #d1fe17;
+  --lemmo-color-brand-lime-hover: #c4ee0b;
+  --lemmo-color-brand-lime-edge: #829b19;
+  --lemmo-color-brand-pink: #ff005b;
+  --lemmo-color-brand-pink-light: #fb398c;
+  --lemmo-color-brand-pink-deep: #ed1572;
+  --lemmo-color-brand-pink-maroon: #d1004e;
+  --lemmo-color-brand-pink-base: #8b006a;
+  --lemmo-color-brand-blue: #0256fe;
+  --lemmo-color-brand-blue-light: #245ef1;
+  --lemmo-color-brand-blue-deep: #1544ed;
+  --lemmo-color-brand-blue-overlay-a: #1d63ef;
+  --lemmo-color-brand-blue-overlay-b: #5150d0;
+  --lemmo-color-brand-cyan: #3c8cff;
+  --lemmo-color-brand-cyan-soft: #9ce6f3;
+  --lemmo-color-brand-cyan-glow: #3cd8ff;
+  --lemmo-color-brand-violet: #853cb0;
+  --lemmo-color-brand-violet-deep: #b02df2;
+
+  /* ------------------------------------------------------------------ */
+  /* Border / separator colors                                           */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-separator-card: rgba(217, 217, 217, 0.04);
+  --lemmo-color-separator-strong: rgba(255, 255, 255, 0.1);
+  --lemmo-color-border-soft: rgba(255, 255, 255, 0.04);
+  --lemmo-color-border-mid: rgba(255, 255, 255, 0.05);
+  --lemmo-color-border-strong: rgba(255, 255, 255, 0.1);
+  --lemmo-color-border-ghost-light: rgba(6, 5, 21, 0.04);
+
+  /* ------------------------------------------------------------------ */
+  /* Alpha overlays (white / black steps)                                */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-white-alpha-4: rgba(255, 255, 255, 0.04);
+  --lemmo-color-white-alpha-5: rgba(255, 255, 255, 0.05);
+  --lemmo-color-white-alpha-8: rgba(255, 255, 255, 0.08);
+  --lemmo-color-white-alpha-10: rgba(255, 255, 255, 0.1);
+  --lemmo-color-white-alpha-15: rgba(255, 255, 255, 0.15);
+  --lemmo-color-white-alpha-20: rgba(255, 255, 255, 0.2);
+  --lemmo-color-white-alpha-30: rgba(255, 255, 255, 0.3);
+  --lemmo-color-white-alpha-50: rgba(255, 255, 255, 0.5);
+  --lemmo-color-white-alpha-70: rgba(255, 255, 255, 0.7);
+  --lemmo-color-black-alpha-4: rgba(0, 0, 0, 0.04);
+  --lemmo-color-black-alpha-7: rgba(0, 0, 0, 0.07);
+  --lemmo-color-black-alpha-20: rgba(0, 0, 0, 0.2);
+  --lemmo-color-black-alpha-24: rgba(0, 0, 0, 0.24);
+
+  /* ------------------------------------------------------------------ */
+  /* Status colors (from docs/design-system/color.md §5)                 */
+  /* ------------------------------------------------------------------ */
+  --lemmo-color-status-danger-fg: #fa0019;
+  --lemmo-color-status-danger-fg-soft: #ff5462;
+  --lemmo-color-status-danger-bg: #5c000f;
+  --lemmo-color-status-danger-glow: #ff1f2e;
+
+  --lemmo-color-status-warning-fg: #dfab01;
+  --lemmo-color-status-warning-fg-soft: #ffef33;
+  --lemmo-color-status-warning-bg: #523f00;
+  --lemmo-color-status-warning-glow: #fff05a;
+
+  --lemmo-color-status-success-fg: #2eb844;
+  --lemmo-color-status-success-fg-soft: #4ee466;
+  --lemmo-color-status-success-bg: #0d4a17;
+  --lemmo-color-status-success-glow: #00e62e;
+
+  --lemmo-color-status-info-fg: #0256fe;
+  --lemmo-color-status-info-fg-soft: #5b91fe;
+  --lemmo-color-status-info-bg: #000d26;
+  --lemmo-color-status-info-glow: #3cd8ff;
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-color-app-background: var(--lemmo-color-app-background);
+  --lemu-color-black-alpha-20: var(--lemmo-color-black-alpha-20);
+  --lemu-color-black-alpha-24: var(--lemmo-color-black-alpha-24);
+  --lemu-color-black-alpha-4: var(--lemmo-color-black-alpha-4);
+  --lemu-color-black-alpha-7: var(--lemmo-color-black-alpha-7);
+  --lemu-color-border-ghost-light: var(--lemmo-color-border-ghost-light);
+  --lemu-color-border-mid: var(--lemmo-color-border-mid);
+  --lemu-color-border-soft: var(--lemmo-color-border-soft);
+  --lemu-color-border-strong: var(--lemmo-color-border-strong);
+  --lemu-color-brand-blue: var(--lemmo-color-brand-blue);
+  --lemu-color-brand-blue-deep: var(--lemmo-color-brand-blue-deep);
+  --lemu-color-brand-blue-light: var(--lemmo-color-brand-blue-light);
+  --lemu-color-brand-blue-overlay-a: var(--lemmo-color-brand-blue-overlay-a);
+  --lemu-color-brand-blue-overlay-b: var(--lemmo-color-brand-blue-overlay-b);
+  --lemu-color-brand-cyan: var(--lemmo-color-brand-cyan);
+  --lemu-color-brand-cyan-glow: var(--lemmo-color-brand-cyan-glow);
+  --lemu-color-brand-cyan-soft: var(--lemmo-color-brand-cyan-soft);
+  --lemu-color-brand-lime: var(--lemmo-color-brand-lime);
+  --lemu-color-brand-lime-edge: var(--lemmo-color-brand-lime-edge);
+  --lemu-color-brand-lime-hover: var(--lemmo-color-brand-lime-hover);
+  --lemu-color-brand-pink: var(--lemmo-color-brand-pink);
+  --lemu-color-brand-pink-base: var(--lemmo-color-brand-pink-base);
+  --lemu-color-brand-pink-deep: var(--lemmo-color-brand-pink-deep);
+  --lemu-color-brand-pink-light: var(--lemmo-color-brand-pink-light);
+  --lemu-color-brand-pink-maroon: var(--lemmo-color-brand-pink-maroon);
+  --lemu-color-brand-violet: var(--lemmo-color-brand-violet);
+  --lemu-color-brand-violet-deep: var(--lemmo-color-brand-violet-deep);
+  --lemu-color-font-faint: var(--lemmo-color-font-faint);
+  --lemu-color-font-muted: var(--lemmo-color-font-muted);
+  --lemu-color-font-on-brand: var(--lemmo-color-font-on-brand);
+  --lemu-color-font-primary: var(--lemmo-color-font-primary);
+  --lemu-color-font-reverted: var(--lemmo-color-font-reverted);
+  --lemu-color-font-reverted-30: var(--lemmo-color-font-reverted-30);
+  --lemu-color-font-reverted-50: var(--lemmo-color-font-reverted-50);
+  --lemu-color-font-reverted-80: var(--lemmo-color-font-reverted-80);
+  --lemu-color-font-secondary: var(--lemmo-color-font-secondary);
+  --lemu-color-page-primary: var(--lemmo-color-page-primary);
+  --lemu-color-separator-card: var(--lemmo-color-separator-card);
+  --lemu-color-separator-strong: var(--lemmo-color-separator-strong);
+  --lemu-color-status-danger-bg: var(--lemmo-color-status-danger-bg);
+  --lemu-color-status-danger-fg: var(--lemmo-color-status-danger-fg);
+  --lemu-color-status-danger-fg-soft: var(--lemmo-color-status-danger-fg-soft);
+  --lemu-color-status-danger-glow: var(--lemmo-color-status-danger-glow);
+  --lemu-color-status-info-bg: var(--lemmo-color-status-info-bg);
+  --lemu-color-status-info-fg: var(--lemmo-color-status-info-fg);
+  --lemu-color-status-info-fg-soft: var(--lemmo-color-status-info-fg-soft);
+  --lemu-color-status-info-glow: var(--lemmo-color-status-info-glow);
+  --lemu-color-status-success-bg: var(--lemmo-color-status-success-bg);
+  --lemu-color-status-success-fg: var(--lemmo-color-status-success-fg);
+  --lemu-color-status-success-fg-soft: var(--lemmo-color-status-success-fg-soft);
+  --lemu-color-status-success-glow: var(--lemmo-color-status-success-glow);
+  --lemu-color-status-warning-bg: var(--lemmo-color-status-warning-bg);
+  --lemu-color-status-warning-fg: var(--lemmo-color-status-warning-fg);
+  --lemu-color-status-warning-fg-soft: var(--lemmo-color-status-warning-fg-soft);
+  --lemu-color-status-warning-glow: var(--lemmo-color-status-warning-glow);
+  --lemu-color-surface-brand: var(--lemmo-color-surface-brand);
+  --lemu-color-surface-brand-edge: var(--lemmo-color-surface-brand-edge);
+  --lemu-color-surface-brand-hover: var(--lemmo-color-surface-brand-hover);
+  --lemu-color-surface-brand-secondary: var(--lemmo-color-surface-brand-secondary);
+  --lemu-color-surface-elevated: var(--lemmo-color-surface-elevated);
+  --lemu-color-surface-glass: var(--lemmo-color-surface-glass);
+  --lemu-color-surface-primary: var(--lemmo-color-surface-primary);
+  --lemu-color-surface-secondary: var(--lemmo-color-surface-secondary);
+  --lemu-color-surface-tertiary: var(--lemmo-color-surface-tertiary);
+  --lemu-color-white-alpha-10: var(--lemmo-color-white-alpha-10);
+  --lemu-color-white-alpha-15: var(--lemmo-color-white-alpha-15);
+  --lemu-color-white-alpha-20: var(--lemmo-color-white-alpha-20);
+  --lemu-color-white-alpha-30: var(--lemmo-color-white-alpha-30);
+  --lemu-color-white-alpha-4: var(--lemmo-color-white-alpha-4);
+  --lemu-color-white-alpha-5: var(--lemmo-color-white-alpha-5);
+  --lemu-color-white-alpha-50: var(--lemmo-color-white-alpha-50);
+  --lemu-color-white-alpha-70: var(--lemmo-color-white-alpha-70);
+  --lemu-color-white-alpha-8: var(--lemmo-color-white-alpha-8);
+}

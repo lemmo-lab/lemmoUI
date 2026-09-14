@@ -1,0 +1,31 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* System breakpoints (rem)                                            */
+  /* ------------------------------------------------------------------ */
+  --lemmo-bp-base: 20rem;    /* 320 px  mobile floor */
+  --lemmo-bp-sm: 40rem;      /* 640 px */
+  --lemmo-bp-md: 48rem;      /* 768 px  tablet / 2-col grid */
+  --lemmo-bp-lg: 64rem;      /* 1024 px */
+  --lemmo-bp-xl: 80rem;      /* 1280 px desktop / 3-col grid */
+  --lemmo-bp-2xl: 120rem;    /* 1920 px */
+  --lemmo-bp-3xl: 158rem;    /* 2528 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic aliases                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemmo-bp-tablet: var(--lemmo-bp-md);
+  --lemmo-bp-desktop: var(--lemmo-bp-xl);
+  --lemmo-bp-wide: var(--lemmo-bp-2xl);
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-bp-2xl: var(--lemmo-bp-2xl);
+  --lemu-bp-3xl: var(--lemmo-bp-3xl);
+  --lemu-bp-base: var(--lemmo-bp-base);
+  --lemu-bp-desktop: var(--lemmo-bp-desktop);
+  --lemu-bp-lg: var(--lemmo-bp-lg);
+  --lemu-bp-md: var(--lemmo-bp-md);
+  --lemu-bp-sm: var(--lemmo-bp-sm);
+  --lemu-bp-tablet: var(--lemmo-bp-tablet);
+  --lemu-bp-wide: var(--lemmo-bp-wide);
+  --lemu-bp-xl: var(--lemmo-bp-xl);
+}

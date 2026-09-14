@@ -1,14 +1,2 @@
-/* lemu design tokens — combined entry point.
-   Import in dependency order (each item only references earlier items).
-   All tokens are CSS custom properties on :root. */
-
-@import "./lemu.colors.css";
-@import "./lemu.gradients.css";
-@import "./lemu.spacing.css";
-@import "./lemu.typography.css";
-@import "./lemu.radius.css";
-@import "./lemu.strokes.css";
-@import "./lemu.sizes.css";
-@import "./lemu.breakpoints.css";
-@import "./lemu.motion.css";
-@import "./lemu.elevation.css";
+/* Lemu backward-compatibility entry point — re-exports lemmo tokens */
+@import "./lemmo.tokens.css";

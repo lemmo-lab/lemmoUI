@@ -1,0 +1,47 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Radius ladder (same quarter-rem basis as spacing)                   */
+  /* ------------------------------------------------------------------ */
+  --lemmo-radius-0: 0;
+  --lemmo-radius-050: .125rem;   /* 2 px */
+  --lemmo-radius-100: .25rem;    /* 4 px */
+  --lemmo-radius-150: .375rem;   /* 6 px */
+  --lemmo-radius-200: .5rem;     /* 8 px */
+  --lemmo-radius-250: .625rem;   /* 10 px */
+  --lemmo-radius-300: .75rem;    /* 12 px */
+  --lemmo-radius-400: 1rem;      /* 16 px */
+  --lemmo-radius-500: 1.25rem;   /* 20 px */
+  --lemmo-radius-600: 1.5rem;    /* 24 px */
+  --lemmo-radius-full: 9999px;   /* pill */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic radius                                                    */
+  /* ------------------------------------------------------------------ */
+  --lemmo-radius-control: var(--lemmo-radius-200);    /* 8 px  buttons, inputs */
+  --lemmo-radius-card: var(--lemmo-radius-300);       /* 12 px cards, tables, CTA */
+  --lemmo-radius-badge: var(--lemmo-radius-150);      /* 6 px  status badges */
+  --lemmo-radius-featured-card: var(--lemmo-radius-500); /* 20 px featured surfaces */
+  --lemmo-radius-media: var(--lemmo-radius-400);      /* 16 px media containers */
+  --lemmo-radius-media-lg: var(--lemmo-radius-600);   /* 24 px large media */
+  --lemmo-radius-pill: var(--lemmo-radius-full);      /* full round */
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-radius-0: var(--lemmo-radius-0);
+  --lemu-radius-050: var(--lemmo-radius-050);
+  --lemu-radius-100: var(--lemmo-radius-100);
+  --lemu-radius-150: var(--lemmo-radius-150);
+  --lemu-radius-200: var(--lemmo-radius-200);
+  --lemu-radius-250: var(--lemmo-radius-250);
+  --lemu-radius-300: var(--lemmo-radius-300);
+  --lemu-radius-400: var(--lemmo-radius-400);
+  --lemu-radius-500: var(--lemmo-radius-500);
+  --lemu-radius-600: var(--lemmo-radius-600);
+  --lemu-radius-badge: var(--lemmo-radius-badge);
+  --lemu-radius-card: var(--lemmo-radius-card);
+  --lemu-radius-control: var(--lemmo-radius-control);
+  --lemu-radius-featured-card: var(--lemmo-radius-featured-card);
+  --lemu-radius-full: var(--lemmo-radius-full);
+  --lemu-radius-media: var(--lemmo-radius-media);
+  --lemu-radius-media-lg: var(--lemmo-radius-media-lg);
+  --lemu-radius-pill: var(--lemmo-radius-pill);
+}

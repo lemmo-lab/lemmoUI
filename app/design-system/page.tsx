@@ -32,24 +32,24 @@ import { useTheme } from '@/components/theme-provider'
 import { ThemeSwitcher } from '@/components/theme-switcher'
 
 const brandColors = [
-  { name: 'Brand Lime (Primary)', hex: '#D1FE17', token: '--lemu-color-surface-brand', text: '#131517', role: 'Primary action CTA' },
-  { name: 'Lime Hover', hex: '#C4EE0B', token: '--lemu-color-surface-brand-hover', text: '#131517', role: 'Hover state' },
-  { name: 'Lime Edge (Inset)', hex: '#829B19', token: '--lemu-color-surface-brand-edge', text: '#ffffff', role: 'CTA inset 3D edge' },
-  { name: 'Brand Pink (Secondary)', hex: '#FF005B', token: '--lemu-color-surface-brand-secondary', text: '#ffffff', role: 'Secondary accent & highlights' },
-  { name: 'Pink Deep', hex: '#ED1572', token: '--lemu-color-brand-pink-deep', text: '#ffffff', role: 'Offer gradient stops' },
-  { name: 'Brand Blue', hex: '#0256FE', token: '--lemu-color-brand-blue', text: '#ffffff', role: 'Detail & link accent' },
-  { name: 'Brand Cyan Glow', hex: '#3CD8FF', token: '--lemu-color-brand-cyan-glow', text: '#131517', role: 'Table highlight & cyan glow' },
-  { name: 'Brand Violet', hex: '#853CB0', token: '--lemu-color-brand-violet', text: '#ffffff', role: 'Ultraviolet gradient accent' },
+  { name: 'Brand Lime (Primary)', hex: '#D1FE17', token: '--lemmo-color-surface-brand', text: '#131517', role: 'Primary action CTA' },
+  { name: 'Lime Hover', hex: '#C4EE0B', token: '--lemmo-color-surface-brand-hover', text: '#131517', role: 'Hover state' },
+  { name: 'Lime Edge (Inset)', hex: '#829B19', token: '--lemmo-color-surface-brand-edge', text: '#ffffff', role: 'CTA inset 3D edge' },
+  { name: 'Brand Pink (Secondary)', hex: '#FF005B', token: '--lemmo-color-surface-brand-secondary', text: '#ffffff', role: 'Secondary accent & highlights' },
+  { name: 'Pink Deep', hex: '#ED1572', token: '--lemmo-color-brand-pink-deep', text: '#ffffff', role: 'Offer gradient stops' },
+  { name: 'Brand Blue', hex: '#0256FE', token: '--lemmo-color-brand-blue', text: '#ffffff', role: 'Detail & link accent' },
+  { name: 'Brand Cyan Glow', hex: '#3CD8FF', token: '--lemmo-color-brand-cyan-glow', text: '#131517', role: 'Table highlight & cyan glow' },
+  { name: 'Brand Violet', hex: '#853CB0', token: '--lemmo-color-brand-violet', text: '#ffffff', role: 'Ultraviolet gradient accent' },
 ]
 
 const surfaces = [
-  { name: 'Page Primary', hex: '#131517', desc: 'Standard canvas page background', token: '--lemu-color-page-primary' },
-  { name: 'App Background', hex: '#131416', desc: 'Application shell viewport background', token: '--lemu-color-app-background' },
-  { name: 'Surface Tertiary', hex: '#0F1113', desc: 'Deepest backdrop surface (pricing bg)', token: '--lemu-color-surface-tertiary' },
-  { name: 'Surface Primary', hex: '#1C1E20', desc: 'Default card & panel surface', token: '--lemu-color-surface-primary' },
-  { name: 'Surface Secondary', hex: '#23262A', desc: 'Raised surface & popover menus', token: '--lemu-color-surface-secondary' },
-  { name: 'Surface Elevated', hex: '#18191C', desc: 'Gradient base & elevated layers', token: '--lemu-color-surface-elevated' },
-  { name: 'Surface Glass', hex: 'rgba(15,17,19,0.88)', desc: 'Translucent frosted glass card', token: '--lemu-color-surface-glass' },
+  { name: 'Page Primary', hex: '#131517', desc: 'Standard canvas page background', token: '--lemmo-color-page-primary' },
+  { name: 'App Background', hex: '#131416', desc: 'Application shell viewport background', token: '--lemmo-color-app-background' },
+  { name: 'Surface Tertiary', hex: '#0F1113', desc: 'Deepest backdrop surface (pricing bg)', token: '--lemmo-color-surface-tertiary' },
+  { name: 'Surface Primary', hex: '#1C1E20', desc: 'Default card & panel surface', token: '--lemmo-color-surface-primary' },
+  { name: 'Surface Secondary', hex: '#23262A', desc: 'Raised surface & popover menus', token: '--lemmo-color-surface-secondary' },
+  { name: 'Surface Elevated', hex: '#18191C', desc: 'Gradient base & elevated layers', token: '--lemmo-color-surface-elevated' },
+  { name: 'Surface Glass', hex: 'rgba(15,17,19,0.88)', desc: 'Translucent frosted glass card', token: '--lemmo-color-surface-glass' },
 ]
 
 const statusMatrix = [
@@ -61,8 +61,8 @@ const statusMatrix = [
     bg: '#5C000F',
     glow: '#FF1F2E',
     ratio: '5.84:1',
-    tokenText: '--lemu-color-status-danger-fg-soft',
-    tokenBg: '--lemu-color-status-danger-bg',
+    tokenText: '--lemmo-color-status-danger-fg-soft',
+    tokenBg: '--lemmo-color-status-danger-bg',
     icon: AlertCircle,
   },
   {
@@ -73,8 +73,8 @@ const statusMatrix = [
     bg: '#523F00',
     glow: '#FFF05A',
     ratio: '8.68:1',
-    tokenText: '--lemu-color-status-warning-fg',
-    tokenBg: '--lemu-color-status-warning-bg',
+    tokenText: '--lemmo-color-status-warning-fg',
+    tokenBg: '--lemmo-color-status-warning-bg',
     icon: AlertTriangle,
   },
   {
@@ -85,8 +85,8 @@ const statusMatrix = [
     bg: '#0D4A17',
     glow: '#00E62E',
     ratio: '10.99:1',
-    tokenText: '--lemu-color-status-success-fg-soft',
-    tokenBg: '--lemu-color-status-success-bg',
+    tokenText: '--lemmo-color-status-success-fg-soft',
+    tokenBg: '--lemmo-color-status-success-bg',
     icon: CheckCircle2,
   },
   {
@@ -97,8 +97,8 @@ const statusMatrix = [
     bg: '#000D26',
     glow: '#3CD8FF',
     ratio: '6.04:1',
-    tokenText: '--lemu-color-status-info-fg-soft',
-    tokenBg: '--lemu-color-status-info-bg',
+    tokenText: '--lemmo-color-status-info-fg-soft',
+    tokenBg: '--lemmo-color-status-info-bg',
     icon: Info,
   },
 ]
@@ -113,13 +113,13 @@ const fontHierarchy = [
 ]
 
 const radii = [
-  { name: 'Pill / Full', value: '9999px', token: '--lemu-radius-pill', usage: 'Badges, status chips, pills' },
-  { name: 'Featured Card', value: '1.25rem (20px)', token: '--lemu-radius-featured-card', usage: 'Featured pricing & modal shells' },
-  { name: 'Media Card', value: '1rem (16px)', token: '--lemu-radius-media', usage: 'Media players, image frames' },
-  { name: 'Card / Panel', value: '0.75rem (12px)', token: '--lemu-radius-card', usage: 'Standard cards, tables, CTA button' },
-  { name: 'Control', value: '0.5rem (8px)', token: '--lemu-radius-control', usage: 'Standard buttons, text inputs' },
-  { name: 'Badge', value: '0.375rem (6px)', token: '--lemu-radius-badge', usage: 'Micro tags, small badges' },
-  { name: 'Sharp (Zero)', value: '0px', token: '--lemu-radius-0', usage: 'Minimalist & square boundaries' },
+  { name: 'Pill / Full', value: '9999px', token: '--lemmo-radius-pill', usage: 'Badges, status chips, pills' },
+  { name: 'Featured Card', value: '1.25rem (20px)', token: '--lemmo-radius-featured-card', usage: 'Featured pricing & modal shells' },
+  { name: 'Media Card', value: '1rem (16px)', token: '--lemmo-radius-media', usage: 'Media players, image frames' },
+  { name: 'Card / Panel', value: '0.75rem (12px)', token: '--lemmo-radius-card', usage: 'Standard cards, tables, CTA button' },
+  { name: 'Control', value: '0.5rem (8px)', token: '--lemmo-radius-control', usage: 'Standard buttons, text inputs' },
+  { name: 'Badge', value: '0.375rem (6px)', token: '--lemmo-radius-badge', usage: 'Micro tags, small badges' },
+  { name: 'Sharp (Zero)', value: '0px', token: '--lemmo-radius-0', usage: 'Minimalist & square boundaries' },
 ]
 
 const iconLadder = [
@@ -380,7 +380,7 @@ export default function DesignSystemPage() {
             <Sparkles className="size-5 text-primary" />
             <div>
               <h2 className="text-2xl font-semibold tracking-tight">Lemu Logo Monogram Rules</h2>
-              <p className="text-sm text-muted-foreground">Two-path abstract "L" monogram in lime #D1FE17 on dark, and reverted #060515 on lime (docs/logo.md).</p>
+              <p className="text-sm text-muted-foreground">The signature triad mark: three circular dots in lime #D1FE17 on dark, and reverted #060515 on lime (docs/logo.md).</p>
             </div>
           </div>
 
@@ -388,7 +388,7 @@ export default function DesignSystemPage() {
             <Card className="border-border bg-card">
               <CardHeader>
                 <CardTitle className="text-sm">Standard Dark Surface (Brand Lime)</CardTitle>
-                <CardDescription>Rendered on dark canvases (--lemu-color-page-primary)</CardDescription>
+                <CardDescription>Rendered on dark canvases (--lemmo-color-page-primary)</CardDescription>
               </CardHeader>
               <CardContent className="flex items-center justify-center p-8 bg-[#131517] rounded-xl border border-border/60">
                 <LemmoMark className="size-16 fill-[#D1FE17]" />
@@ -487,7 +487,7 @@ export default function DesignSystemPage() {
                 <pre className="overflow-x-auto rounded-lg bg-background p-3 text-[11px] font-mono text-muted-foreground border border-border">
                   <code>{`box-shadow: 0 0 0.4rem color-mix(
   in srgb,
-  var(--lemu-color-surface-brand) 56%,
+  var(--lemmo-color-surface-brand) 56%,
   transparent
 );`}</code>
                 </pre>

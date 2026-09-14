@@ -1,0 +1,45 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Durations                                                          */
+  /* ------------------------------------------------------------------ */
+  --lemmo-duration-fast: 100ms;      /* progress fill, micro-ticks */
+  --lemmo-duration-normal: 200ms;    /* toggle thumb, hover states */
+  --lemmo-duration-slow: 300ms;      /* card border/color transitions */
+  --lemmo-duration-slower: 500ms;    /* legacy card transitions */
+  --lemmo-duration-slider: 150ms;    /* credit slider (width/left) */
+  --lemmo-duration-plan-swap: 420ms; /* plan swap enter/exit */
+  --lemmo-duration-breathe: 1.8s;    /* slider-tick breathe (infinite) */
+
+  /* ------------------------------------------------------------------ */
+  /* Eases — verified against the reference                              */
+  /* ------------------------------------------------------------------ */
+  --lemmo-ease-out: ease-out;                                 /* cards (300/500ms) */
+  --lemmo-ease-in-out: ease-in-out;                           /* breathe (1.8s) */
+  --lemmo-ease-snap: cubic-bezier(0.77, 0, 0.175, 1);         /* plan swap (0.42s) */
+
+  /* ------------------------------------------------------------------ */
+  /* Eases — named in the scale; curve is an estimate (verified names)   */
+  /* ------------------------------------------------------------------ */
+  --lemmo-ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --lemmo-ease-swift: cubic-bezier(0.55, 0, 0.1, 1);
+  --lemmo-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --lemmo-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --lemmo-ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-duration-breathe: var(--lemmo-duration-breathe);
+  --lemu-duration-fast: var(--lemmo-duration-fast);
+  --lemu-duration-normal: var(--lemmo-duration-normal);
+  --lemu-duration-plan-swap: var(--lemmo-duration-plan-swap);
+  --lemu-duration-slider: var(--lemmo-duration-slider);
+  --lemu-duration-slow: var(--lemmo-duration-slow);
+  --lemu-duration-slower: var(--lemmo-duration-slower);
+  --lemu-ease-emphasized: var(--lemmo-ease-emphasized);
+  --lemu-ease-in-out: var(--lemmo-ease-in-out);
+  --lemu-ease-out: var(--lemmo-ease-out);
+  --lemu-ease-out-expo: var(--lemmo-ease-out-expo);
+  --lemu-ease-out-quart: var(--lemmo-ease-out-quart);
+  --lemu-ease-snap: var(--lemmo-ease-snap);
+  --lemu-ease-spring: var(--lemmo-ease-spring);
+  --lemu-ease-swift: var(--lemmo-ease-swift);
+}

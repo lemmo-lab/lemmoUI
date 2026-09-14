@@ -1,0 +1,31 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Card elevation                                                     */
+  /* ------------------------------------------------------------------ */
+  --lemmo-shadow-card-featured: 0 1.5rem 4rem rgba(0,0,0,0.24);  /* highlighted card */
+  --lemmo-shadow-card-base: 10px 34px 24px 0 rgba(0,0,0,0.15);   /* ambient drop    */
+
+  /* ------------------------------------------------------------------ */
+  /* Brand CTA gloss (lime buttons) — exact inset stack                  */
+  /* ------------------------------------------------------------------ */
+  --lemmo-shadow-button-brand-inset: inset 0 0.8px 0 0 #d1fe17, inset 0 -1.6px 0 0 #829b19, inset 0 -2.4px 0 0 #829b19;
+  --lemmo-shadow-button-brand: var(--lemmo-shadow-button-brand-inset), 10px 34px 24px 0px rgba(0,0,0,0.15);
+
+  /* ------------------------------------------------------------------ */
+  /* Inner gloss (pills, offer cards)                                    */
+  /* ------------------------------------------------------------------ */
+  --lemmo-shadow-gloss-inset: inset 0 -2px 2px 0 rgba(255,255,255,0.4), inset 0 2px 2px 0 rgba(255,255,255,0.4);
+
+  /* ------------------------------------------------------------------ */
+  /* Brand glow                                                         */
+  /* ------------------------------------------------------------------ */
+  --lemmo-glow-brand-breathe: 0 0 0.4rem color-mix(in srgb, var(--lemmo-color-surface-brand) 56%, transparent);
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-glow-brand-breathe: var(--lemmo-glow-brand-breathe);
+  --lemu-shadow-button-brand: var(--lemmo-shadow-button-brand);
+  --lemu-shadow-button-brand-inset: var(--lemmo-shadow-button-brand-inset);
+  --lemu-shadow-card-base: var(--lemmo-shadow-card-base);
+  --lemu-shadow-card-featured: var(--lemmo-shadow-card-featured);
+  --lemu-shadow-gloss-inset: var(--lemmo-shadow-gloss-inset);
+}

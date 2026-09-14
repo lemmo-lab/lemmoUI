@@ -1,0 +1,73 @@
+:root {
+  /* ------------------------------------------------------------------ */
+  /* 4 px ladder — base unit 4px, each token a quarter-rem step          */
+  /* ------------------------------------------------------------------ */
+  --lemmo-space-0: 0;
+  --lemmo-space-050: .125rem;   /* 2 px */
+  --lemmo-space-100: .25rem;    /* 4 px */
+  --lemmo-space-150: .375rem;   /* 6 px */
+  --lemmo-space-200: .5rem;     /* 8 px */
+  --lemmo-space-250: .625rem;   /* 10 px */
+  --lemmo-space-300: .75rem;    /* 12 px */
+  --lemmo-space-400: 1rem;      /* 16 px */
+  --lemmo-space-500: 1.25rem;   /* 20 px */
+  --lemmo-space-600: 1.5rem;    /* 24 px */
+  --lemmo-space-700: 1.75rem;   /* 28 px */
+  --lemmo-space-800: 2rem;      /* 32 px */
+  --lemmo-space-1000: 2.5rem;   /* 40 px */
+  --lemmo-space-1200: 3rem;     /* 48 px */
+  --lemmo-space-1400: 3.5rem;   /* 56 px */
+  --lemmo-space-1600: 4rem;     /* 64 px */
+  --lemmo-space-2000: 5rem;     /* 80 px */
+  --lemmo-space-2400: 6rem;     /* 96 px */
+
+  /* ------------------------------------------------------------------ */
+  /* Gaps (between elements)                                             */
+  /* ------------------------------------------------------------------ */
+  --lemmo-gap-0-5: var(--lemmo-space-050);   /* 2 px  (toggle thumb offset, badge micro-gap) */
+  --lemmo-gap-1: var(--lemmo-space-100);     /* 4 px  (inline icon+label) */
+  --lemmo-gap-1-5: var(--lemmo-space-150);   /* 6 px  (table rows, feature rows) */
+  --lemmo-gap-2: var(--lemmo-space-200);     /* 8 px  (card grid default) */
+  --lemmo-gap-2-5: var(--lemmo-space-250);   /* 10 px */
+  --lemmo-gap-3: var(--lemmo-space-300);     /* 12 px (billing toggle, header stacks) */
+  --lemmo-gap-4: var(--lemmo-space-400);     /* 16 px (card grid ≥1280px) */
+
+  /* ------------------------------------------------------------------ */
+  /* Semantic rhythm (structural)                                        */
+  /* ------------------------------------------------------------------ */
+  --lemmo-gap-card-grid: var(--lemmo-space-200);    /* 8 px, 16 px at desktop */
+  --lemmo-gap-card-inner: var(--lemmo-space-200);   /* 8 px between card body rows */
+  --lemmo-gap-section-sm: var(--lemmo-space-1000);  /* 40 px section rhythm (py-10) */
+  --lemmo-gap-section-lg: var(--lemmo-space-2000);  /* 80 px section rhythm (py-20) */
+
+  /* Backward compatibility aliases (--lemu-* -> --lemmo-*) */
+  --lemu-gap-0-5: var(--lemmo-gap-0-5);
+  --lemu-gap-1: var(--lemmo-gap-1);
+  --lemu-gap-1-5: var(--lemmo-gap-1-5);
+  --lemu-gap-2: var(--lemmo-gap-2);
+  --lemu-gap-2-5: var(--lemmo-gap-2-5);
+  --lemu-gap-3: var(--lemmo-gap-3);
+  --lemu-gap-4: var(--lemmo-gap-4);
+  --lemu-gap-card-grid: var(--lemmo-gap-card-grid);
+  --lemu-gap-card-inner: var(--lemmo-gap-card-inner);
+  --lemu-gap-section-lg: var(--lemmo-gap-section-lg);
+  --lemu-gap-section-sm: var(--lemmo-gap-section-sm);
+  --lemu-space-0: var(--lemmo-space-0);
+  --lemu-space-050: var(--lemmo-space-050);
+  --lemu-space-100: var(--lemmo-space-100);
+  --lemu-space-1000: var(--lemmo-space-1000);
+  --lemu-space-1200: var(--lemmo-space-1200);
+  --lemu-space-1400: var(--lemmo-space-1400);
+  --lemu-space-150: var(--lemmo-space-150);
+  --lemu-space-1600: var(--lemmo-space-1600);
+  --lemu-space-200: var(--lemmo-space-200);
+  --lemu-space-2000: var(--lemmo-space-2000);
+  --lemu-space-2400: var(--lemmo-space-2400);
+  --lemu-space-250: var(--lemmo-space-250);
+  --lemu-space-300: var(--lemmo-space-300);
+  --lemu-space-400: var(--lemmo-space-400);
+  --lemu-space-500: var(--lemmo-space-500);
+  --lemu-space-600: var(--lemmo-space-600);
+  --lemu-space-700: var(--lemmo-space-700);
+  --lemu-space-800: var(--lemmo-space-800);
+}
