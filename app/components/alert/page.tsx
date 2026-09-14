@@ -7,26 +7,27 @@ import { ComponentPagination } from '@/components/component-pagination'
 
 const installCommand = 'pnpm dlx shadcn@latest add alert'
 
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+
 function AlertCard({ variant = 'success' }: { variant?: 'success' | 'info' }) {
   const isSuccess = variant === 'success'
   return (
-    <div className="flex gap-3 rounded-lg border border-border bg-card p-4">
+    <Alert className="flex gap-3 items-start">
       <div className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-foreground text-background">
         {isSuccess ? <Check className="size-3" strokeWidth={3} /> : <Info className="size-3" strokeWidth={3} />}
       </div>
       <div>
-        <p className="text-sm font-medium">{isSuccess ? 'Everything looks good.' : 'Heads up.'}</p>
-        <p className="mt-1 text-sm leading-6 text-muted-foreground">
+        <AlertTitle>{isSuccess ? 'Everything looks good.' : 'Heads up.'}</AlertTitle>
+        <AlertDescription className="mt-1">
           {isSuccess ? 'Your project is ready to be shipped.' : 'You can review this action before continuing.'}
-        </p>
+        </AlertDescription>
       </div>
-    </div>
+    </Alert>
   )
 }
 
 export default function AlertPage() {
   const [copied, setCopied] = useState(false)
-  const [dark, setDark] = useState(true)
 
   const copyCommand = async () => {
     await navigator.clipboard?.writeText(installCommand)
@@ -35,8 +36,8 @@ export default function AlertPage() {
   }
 
   return (
-    <div className={dark ? 'dark min-h-screen bg-background text-foreground' : 'min-h-screen bg-background text-foreground'}>
-      <SiteHeader dark={dark} onThemeChange={() => setDark(!dark)} />
+    <div className="min-h-screen bg-background text-foreground">
+      <SiteHeader />
 
       <div className="mx-auto max-w-5xl px-5 py-8 sm:px-8 sm:py-12">
         <a href="/" className="mb-10 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">

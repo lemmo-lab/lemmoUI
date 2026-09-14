@@ -1,0 +1,16 @@
+/**
+ * Lemmo UI — Design Token Contract Specification
+ *
+ * All components in Lemmo UI strictly consume semantic tokens.
+ * A "Theme" is simply a set of values assigned to these variables.
+ *
+ * Rules:
+ * 1. Never hardcode color hexes/rgb inside component source.
+ * 2. Paired tokens: Background tokens MUST always have a corresponding Foreground token.
+ * 3. Geometry (padding, min-h, flex layout) belongs to the component core, NOT themes.
+ * 4. Radii scale proportionally from `--radius`.
+ */
+
+:root {
+  --radius: 0.5rem;
+}

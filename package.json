@@ -2,7 +2,19 @@
   "name": "lemmoui",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@12.3.4",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "import": "./index.ts",
+      "default": "./index.ts"
+    },
+    "./styles.css": "./app/globals.css",
+    "./themes": "./themes/index.css",
+    "./themes/*": "./themes/*"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

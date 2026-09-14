@@ -18,21 +18,20 @@ const components = [
 const tones: Record<string, string> = { lime: 'bg-[#d1fe17]', violet: 'bg-[#8f7cff]', blue: 'bg-[#5fa8ff]', orange: 'bg-[#ff914d]', pink: 'bg-[#ff6d91]', cyan: 'bg-[#63d6dc]', yellow: 'bg-[#f7d55d]', green: 'bg-[#6bd58b]' }
 
 export default function DiscoveryPage() {
-  const [dark, setDark] = useState(true)
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState('All')
   const categories = ['All', ...Array.from(new Set(components.map((item) => item.type)))]
   const filtered = useMemo(() => components.filter((item) => (filter === 'All' || item.type === filter) && `${item.name} ${item.description}`.toLowerCase().includes(query.toLowerCase())), [filter, query])
 
   return (
-    <div className={dark ? 'dark min-h-screen bg-background text-foreground' : 'min-h-screen bg-background text-foreground'}>
-      <SiteHeader dark={dark} onThemeChange={() => setDark(!dark)} />
+    <div className="min-h-screen bg-background text-foreground">
+      <SiteHeader />
       <main className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 discovery-grid opacity-40" />
         <section className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 sm:px-8 sm:pt-24">
           <div className="max-w-3xl animate-rise">
-            <div className="mb-6 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-muted-foreground"><span className="grid size-7 place-items-center rounded-full border border-border"><Sparkles className="size-3.5 text-[#d1fe17]" /></span> LEMMO / Discovery</div>
-            <h1 className="max-w-3xl text-5xl font-semibold tracking-[-0.06em] sm:text-7xl">Find the right primitive for <span className="text-[#d1fe17]">what&apos;s next.</span></h1>
+            <div className="mb-6 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-muted-foreground"><span className="grid size-7 place-items-center rounded-full border border-border"><Sparkles className="size-3.5 text-primary" /></span> LEMMO / Discovery</div>
+            <h1 className="max-w-3xl text-5xl font-semibold tracking-[-0.06em] sm:text-7xl">Find the right primitive for <span className="text-primary">what&apos;s next.</span></h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">A living index of accessible, composable components. Browse by intent, preview the rhythm, and take the pattern with you.</p>
           </div>
           <div className="mt-12 grid gap-3 sm:grid-cols-[1fr_auto]">
@@ -46,7 +45,7 @@ export default function DiscoveryPage() {
           {filtered.length === 0 && <div className="rounded-2xl border border-dashed border-border p-16 text-center text-sm text-muted-foreground">No components match that search.</div>}
         </section>
       </main>
-      <footer className="border-t border-border"><div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-8 text-xs text-muted-foreground sm:px-8"><div className="flex items-center gap-4"><SiteLogo /><span>/ Discovery</span></div><span className="flex items-center gap-2"><Check className="size-3 text-[#d1fe17]" /> Built to be composed</span></div></footer>
+      <footer className="border-t border-border"><div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-8 text-xs text-muted-foreground sm:px-8"><div className="flex items-center gap-4"><SiteLogo /><span>/ Discovery</span></div><span className="flex items-center gap-2"><Check className="size-3 text-primary" /> Built to be composed</span></div></footer>
     </div>
   )
 }
