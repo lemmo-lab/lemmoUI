@@ -79,4 +79,27 @@
   --lemu-color-black-alpha-7: rgba(0, 0, 0, 0.07);
   --lemu-color-black-alpha-20: rgba(0, 0, 0, 0.2);
   --lemu-color-black-alpha-24: rgba(0, 0, 0, 0.24);
+
+  /* ------------------------------------------------------------------ */
+  /* Status colors (from docs/design-system/color.md §5)                 */
+  /* ------------------------------------------------------------------ */
+  --lemu-color-status-danger-fg: #fa0019;
+  --lemu-color-status-danger-fg-soft: #ff5462;
+  --lemu-color-status-danger-bg: #5c000f;
+  --lemu-color-status-danger-glow: #ff1f2e;
+
+  --lemu-color-status-warning-fg: #dfab01;
+  --lemu-color-status-warning-fg-soft: #ffef33;
+  --lemu-color-status-warning-bg: #523f00;
+  --lemu-color-status-warning-glow: #fff05a;
+
+  --lemu-color-status-success-fg: #2eb844;
+  --lemu-color-status-success-fg-soft: #4ee466;
+  --lemu-color-status-success-bg: #0d4a17;
+  --lemu-color-status-success-glow: #00e62e;
+
+  --lemu-color-status-info-fg: #0256fe;
+  --lemu-color-status-info-fg-soft: #5b91fe;
+  --lemu-color-status-info-bg: #000d26;
+  --lemu-color-status-info-glow: #3cd8ff;
 }

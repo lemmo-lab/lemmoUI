@@ -1,19 +1,15 @@
 /**
  * Lemmo UI — Neon Theme (Official Lemmo Brand System)
- * Strictly aligned with Lemmo System Design tokens (System_design/docs/tokens).
- *
- * Primary: #D1FE17 (Lemmo Electric Lime)
- * Secondary Accent: #FF005B (Lemmo Pink)
- * Surface Page: #131517
- * Surface Primary (Cards): #1C1E20
- * Surface Secondary (Raised): #23262A
- * Surface Tertiary (Deep): #0F1113
- * Text Primary: #E1E1E3
- * Text on Brand: #131517
- * Borders: rgba(255, 255, 255, 0.1)
+ * 100% Comprehensive Implementation of Lemmo Design System
+ * Sources:
+ * - docs/design-system/STYLEGUIDE.md
+ * - docs/design-system/color.md
+ * - docs/design-system/typography.md
+ * - docs/design-system/iconography.md
+ * - docs/design-system/logo.md
+ * - System_design/docs/tokens/*.css
  */
 
-/* Dark mode (Default & canonical Lemmo aesthetic) */
 :root,
 [data-theme="neon"],
 .dark[data-theme="neon"],
@@ -22,108 +18,239 @@
 [data-theme="neon"] .dark {
   color-scheme: dark;
 
-  /* Surfaces & Canvas */
-  --background: #131517;
+  /* =================================================================== */
+  /* 1. Surfaces & Canvas Hierarchy (docs/design-system/color.md §1)     */
+  /* =================================================================== */
+  --lemu-color-page-primary: #131517;        /* standard page background */
+  --lemu-color-app-background: #131416;      /* app shell background */
+  --lemu-color-surface-tertiary: #0f1113;    /* deepest surface */
+  --lemu-color-surface-primary: #1c1e20;     /* card / panel surface */
+  --lemu-color-surface-secondary: #23262a;   /* raised surface */
+  --lemu-color-surface-elevated: #18191c;    /* gradient base */
+  --lemu-color-surface-glass: rgba(15, 17, 19, 0.88); /* glass card */
+
+  /* Semantic UI Tokens Mapping */
+  --background: var(--lemu-color-page-primary);
   --foreground: #e1e1e3;
-  --card: #1c1e20;
+  --card: var(--lemu-color-surface-primary);
   --card-foreground: #e1e1e3;
-  --popover: #23262a;
+  --popover: var(--lemu-color-surface-secondary);
   --popover-foreground: #e1e1e3;
-
-  /* Brand Action (Lemmo Lime #D1FE17) */
-  --primary: #d1fe17;
-  --primary-foreground: #131517;
-  --primary-hover: #c4ee0b;
-  --primary-edge: #829b19;
-
-  /* Secondary Brand (Pink / Raised Charcoal) */
-  --secondary: #23262a;
-  --secondary-foreground: #e1e1e3;
-  --brand-pink: #ff005b;
-
-  /* Muted & Faint */
-  --muted: #18191c;
-  --muted-foreground: #898a8b;
-
-  /* Accents */
-  --accent: #23262a;
-  --accent-foreground: #d1fe17;
-
-  /* Feedback */
-  --destructive: #ff005b;
-  --destructive-foreground: #ffffff;
-  --success: #d1fe17;
-  --success-foreground: #131517;
-
-  /* Borders & Dividers */
-  --border: rgba(255, 255, 255, 0.1);
-  --border-soft: rgba(255, 255, 255, 0.04);
-  --input: rgba(255, 255, 255, 0.08);
-  --ring: #d1fe17;
-
-  /* Radius (Cards: 12px / 0.75rem, Controls: 8px / 0.5rem) */
-  --radius: 0.75rem;
-
-  /* Lemmo Brand Gloss & Shadows */
-  --shadow-brand-button: inset 0 0.8px 0 0 #d1fe17, inset 0 -1.6px 0 0 #829b19, inset 0 -2.4px 0 0 #829b19, 10px 34px 24px 0px rgba(0,0,0,0.15);
-  --glow-brand: 0 0 0.4rem rgba(209, 254, 23, 0.56);
-
-  /* Sidebar */
-  --sidebar: #0f1113;
+  --sidebar: var(--lemu-color-surface-tertiary);
   --sidebar-foreground: #e1e1e3;
-  --sidebar-primary: #d1fe17;
+
+  /* =================================================================== */
+  /* 2. Brand Action Surfaces (docs/design-system/color.md §1)           */
+  /* =================================================================== */
+  --lemu-color-surface-brand: #d1fe17;          /* primary action lime */
+  --lemu-color-surface-brand-hover: #c4ee0b;    /* primary action hover */
+  --lemu-color-surface-brand-edge: #829b19;     /* primary action inset edge */
+  --lemu-color-surface-brand-secondary: #ff005b;/* secondary accent pink */
+
+  /* Semantic Brand Tokens */
+  --primary: var(--lemu-color-surface-brand);
+  --primary-foreground: #131517;                /* Dark text on lime (contrast 15.60:1 AA) */
+  --primary-hover: var(--lemu-color-surface-brand-hover);
+  --primary-edge: var(--lemu-color-surface-brand-edge);
+  --secondary: var(--lemu-color-surface-secondary);
+  --secondary-foreground: #e1e1e3;
+  --accent: var(--lemu-color-surface-secondary);
+  --accent-foreground: var(--lemu-color-surface-brand);
+  --ring: var(--lemu-color-surface-brand);
+  --sidebar-primary: var(--lemu-color-surface-brand);
   --sidebar-primary-foreground: #131517;
-  --sidebar-accent: #23262a;
-  --sidebar-accent-foreground: #d1fe17;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
-  --sidebar-ring: #d1fe17;
+
+  /* =================================================================== */
+  /* 3. Typography & Text Colors (docs/design-system/color.md §1 & §4)   */
+  /* =================================================================== */
+  --lemu-color-font-primary: #e1e1e3;           /* Primary text (14.02:1 PASS) */
+  --lemu-color-font-secondary: #a1a1a5;         /* Secondary text (7.11:1 PASS) */
+  --lemu-color-font-muted: #898a8b;             /* Muted text (5.29:1 PASS) */
+  --lemu-color-font-faint: #737475;             /* Faint / Large text only (3.91:1) */
+  --lemu-color-font-on-brand: #131517;          /* Text ON brand lime */
+  --lemu-color-font-reverted: #060515;          /* Near-black textual reverted */
+
+  --muted: var(--lemu-color-surface-elevated);
+  --muted-foreground: var(--lemu-color-font-muted);
+
+  /* Fonts & Weights */
+  --font-heading: "Space Grotesk", "Oddval", sans-serif;
+  --font-body: "Inter", "Satoshi", sans-serif;
+  --font-numeric: "Satoshi", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-serif: "Instrument Serif", serif;
+  --leading-factor: 1;
+
+  /* Weights */
+  --lemu-font-weight-regular: 400;
+  --lemu-font-weight-medium: 500;
+  --lemu-font-weight-cta: 510;                  /* Brand CTA button weight */
+  --lemu-font-weight-semi-bold: 600;
+  --lemu-font-weight-bold: 700;
+  --lemu-font-weight-black: 900;
+
+  /* =================================================================== */
+  /* 4. Brand Accent Palette (docs/design-system/color.md §2)           */
+  /* =================================================================== */
+  --lemu-color-brand-lime: #d1fe17;
+  --lemu-color-brand-lime-hover: #c4ee0b;
+  --lemu-color-brand-lime-edge: #829b19;
+  --lemu-color-brand-pink: #ff005b;
+  --lemu-color-brand-pink-light: #fb398c;
+  --lemu-color-brand-pink-deep: #ed1572;
+  --lemu-color-brand-pink-maroon: #d1004e;
+  --lemu-color-brand-pink-base: #8b006a;
+  --lemu-color-brand-blue: #0256fe;
+  --lemu-color-brand-blue-light: #245ef1;
+  --lemu-color-brand-blue-deep: #1544ed;
+  --lemu-color-brand-cyan: #3c8cff;
+  --lemu-color-brand-cyan-soft: #9ce6f3;
+  --lemu-color-brand-cyan-glow: #3cd8ff;
+  --lemu-color-brand-violet: #853cb0;
+  --lemu-color-brand-violet-deep: #b02df2;
+
+  /* =================================================================== */
+  /* 5. Status Colors (docs/design-system/color.md §5 — Reference Audit) */
+  /* =================================================================== */
+  /* Danger (AA text uses fg-soft #ff5462, 5.84:1 PASS) */
+  --lemu-color-status-danger-fg: #fa0019;
+  --lemu-color-status-danger-fg-soft: #ff5462;
+  --lemu-color-status-danger-bg: #5c000f;
+  --lemu-color-status-danger-glow: #ff1f2e;
+
+  /* Warning (AA text uses fg #dfab01, 8.68:1 PASS) */
+  --lemu-color-status-warning-fg: #dfab01;
+  --lemu-color-status-warning-fg-soft: #ffef33;
+  --lemu-color-status-warning-bg: #523f00;
+  --lemu-color-status-warning-glow: #fff05a;
+
+  /* Success (AA text uses fg-soft #4ee466, 10.99:1 PASS) */
+  --lemu-color-status-success-fg: #2eb844;
+  --lemu-color-status-success-fg-soft: #4ee466;
+  --lemu-color-status-success-bg: #0d4a17;
+  --lemu-color-status-success-glow: #00e62e;
+
+  /* Info (AA text uses fg-soft #5b91fe, 6.04:1 PASS) */
+  --lemu-color-status-info-fg: #0256fe;
+  --lemu-color-status-info-fg-soft: #5b91fe;
+  --lemu-color-status-info-bg: #000d26;
+  --lemu-color-status-info-glow: #3cd8ff;
+
+  /* Semantic Feedback Mappings */
+  --destructive: var(--lemu-color-status-danger-fg-soft);
+  --destructive-foreground: #ffffff;
+  --success: var(--lemu-color-status-success-fg-soft);
+  --success-foreground: #ffffff;
+  --warning: var(--lemu-color-status-warning-fg);
+  --warning-foreground: #131517;
+  --info: var(--lemu-color-status-info-fg-soft);
+  --info-foreground: #ffffff;
+
+  /* =================================================================== */
+  /* 6. Borders, Strokes & Separators (docs/design-system/color.md §3)   */
+  /* =================================================================== */
+  --lemu-color-separator-card: rgba(217, 217, 217, 0.04);
+  --lemu-color-separator-strong: rgba(255, 255, 255, 0.1);
+  --lemu-color-border-soft: rgba(255, 255, 255, 0.04);
+  --lemu-color-border-mid: rgba(255, 255, 255, 0.05);
+  --lemu-color-border-strong: rgba(255, 255, 255, 0.1);
+  --lemu-color-border-ghost-light: rgba(6, 5, 21, 0.04);
+
+  --border: var(--lemu-color-separator-strong);
+  --border-soft: var(--lemu-color-border-soft);
+  --border-mid: var(--lemu-color-border-mid);
+  --input: rgba(255, 255, 255, 0.08);
+
+  /* Stroke widths */
+  --lemu-stroke-hairline: 0.5px;
+  --lemu-stroke-thin: 1px;
+  --lemu-stroke-medium: 1.5px;
+  --lemu-stroke-thick: 2px;
+
+  /* =================================================================== */
+  /* 7. Radii Ladder (System_design/docs/tokens/lemu.radius.css)          */
+  /* =================================================================== */
+  --lemu-radius-0: 0;
+  --lemu-radius-050: 0.125rem;                 /* 2px */
+  --lemu-radius-100: 0.25rem;                  /* 4px */
+  --lemu-radius-150: 0.375rem;                 /* 6px — status badge */
+  --lemu-radius-200: 0.5rem;                   /* 8px — button, input */
+  --lemu-radius-250: 0.625rem;                 /* 10px */
+  --lemu-radius-300: 0.75rem;                  /* 12px — standard card, primary CTA */
+  --lemu-radius-400: 1rem;                     /* 16px — media card */
+  --lemu-radius-500: 1.25rem;                  /* 20px — featured card */
+  --lemu-radius-600: 1.5rem;                   /* 24px — large media */
+  --lemu-radius-full: 9999px;                  /* pill chip */
+
+  --radius: var(--lemu-radius-300);            /* 12px / 0.75rem */
+  --radius-badge: var(--lemu-radius-150);      /* 6px */
+  --radius-control: var(--lemu-radius-200);    /* 8px */
+  --radius-card: var(--lemu-radius-300);       /* 12px */
+  --radius-featured: var(--lemu-radius-500);   /* 20px */
+  --radius-pill: var(--lemu-radius-full);      /* 9999px */
+
+  /* =================================================================== */
+  /* 8. Elevation, Shadows & Brand Gloss (lemu.elevation.css)            */
+  /* =================================================================== */
+  --lemu-shadow-card-featured: 0 1.5rem 4rem rgba(0, 0, 0, 0.24);
+  --lemu-shadow-card-base: 10px 34px 24px 0 rgba(0, 0, 0, 0.15);
+
+  /* Primary CTA Gloss — Exact official inset stack from docs */
+  --lemu-shadow-button-brand-inset: inset 0 0.8px 0 0 #d1fe17, inset 0 -1.6px 0 0 #829b19, inset 0 -2.4px 0 0 #829b19;
+  --lemu-shadow-button-brand: var(--lemu-shadow-button-brand-inset), 10px 34px 24px 0px rgba(0, 0, 0, 0.15);
+
+  /* Inner gloss (pills, offer cards) */
+  --lemu-shadow-gloss-inset: inset 0 -2px 2px 0 rgba(255, 255, 255, 0.4), inset 0 2px 2px 0 rgba(255, 255, 255, 0.4);
+
+  /* Brand Glow breathe */
+  --lemu-glow-brand-breathe: 0 0 0.4rem rgba(209, 254, 23, 0.56);
+
+  /* Shortcuts */
+  --shadow-brand-button: var(--lemu-shadow-button-brand);
+  --glow-brand: var(--lemu-glow-brand-breathe);
+
+  /* =================================================================== */
+  /* 9. Gradients (lemu.gradients.css)                                    */
+  /* =================================================================== */
+  --lemu-gradient-surface-featured: linear-gradient(225deg, rgba(209, 254, 23, 0.16) 0%, rgba(209, 254, 23, 0.08) 28%, rgba(209, 254, 23, 0) 62%), #18191c;
+  --lemu-gradient-surface-pink-haze: radial-gradient(145% 54% at 100% 0%, rgba(255, 0, 91, 0.32) 0%, rgba(255, 0, 91, 0.15) 42%, transparent 78%), linear-gradient(180deg, rgba(255, 0, 91, 0.13) 0%, rgba(255, 0, 91, 0.07) 36%, transparent 72%), #18191c;
+  --lemu-gradient-surface-olive: linear-gradient(180deg, #1f2022 0%, #222420 55%, #272a20 100%);
+  --lemu-gradient-surface-ocean: linear-gradient(180deg, #121d23 0%, #152026 45%, #1d282e 75%, #273238 100%);
+  --lemu-gradient-surface-steel: linear-gradient(180deg, #1f2024 0%, #232428 40%, #343539 75%, #48494d 100%);
+
+  /* Mask rims */
+  --lemu-gradient-rim-vertical: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.09) 18%, rgba(255, 255, 255, 0.03) 38%, rgba(255, 255, 255, 0) 72%);
+  --lemu-gradient-rim-diagonal: linear-gradient(225deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.10) 18%, rgba(255, 255, 255, 0.04) 42%, rgba(255, 255, 255, 0) 76%);
+
+  /* Badge pill gloss */
+  --lemu-gradient-pill-lime: radial-gradient(ellipse 55% 95% at 73% 50%, rgba(117, 239, 29, 0.6) 0%, rgba(194, 237, 21, 0) 100%), radial-gradient(ellipse 25% 42% at 85% 37%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(ellipse 33% 70% at 12% 76%, rgba(200, 239, 29, 0.6) 0%, rgba(194, 237, 21, 0) 100%), linear-gradient(90deg, rgb(209, 254, 23) 0%, rgb(209, 254, 23) 100%);
+  --lemu-gradient-pill-pink: radial-gradient(ellipse 55% 95% at 73% 50%, rgba(239, 29, 186, 0.6) 0%, rgba(237, 21, 114, 0) 100%), radial-gradient(ellipse 25% 42% at 85% 37%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(ellipse 33% 70% at 12% 76%, rgba(176, 29, 239, 0.6) 0%, rgba(206, 25, 176, 0.3) 50%, rgba(237, 21, 114, 0) 100%), linear-gradient(90deg, rgb(255, 0, 91) 0%, rgb(255, 0, 91) 100%);
+  --lemu-gradient-pill-blue: radial-gradient(ellipse 75% 300% at 73% 50%, #1d63ef 0%, #5150d0 45%, rgba(237, 21, 114, 0) 100%), radial-gradient(ellipse 30% 120% at 85% 37%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #0256fe;
+
+  /* =================================================================== */
+  /* 10. Iconography Standards (docs/design-system/iconography.md)        */
+  /* =================================================================== */
+  --lemu-size-icon-xs: 0.75rem;                 /* 12px — ultra compact */
+  --lemu-size-icon-sm: 1rem;                    /* 16px — inline default */
+  --lemu-size-icon-md: 1.25rem;                 /* 20px — control inline */
+  --lemu-size-icon-lg: 1.5rem;                  /* 24px — section icon */
+  --lemu-size-icon-xl: 1.75rem;                 /* 28px — large featured */
+  --lemu-icon-stroke: 1.5;                      /* official production stroke */
 }
 
-/* Light mode companion for Neon */
-html:not(.dark) [data-theme="neon"]:not(.dark),
-html:not(.dark)[data-theme="neon"] {
-  color-scheme: light;
+/* =================================================================== */
+/* 11. Persian / Multi-Language Rules (docs/typography.md §2 & §3)    */
+/* =================================================================== */
+[lang="fa"] {
+  --font-heading: "Morabba", sans-serif;
+  --font-body: "IRANSans", sans-serif;
+  --leading-factor: 1.15;
+}
 
-  --background: #f8faf5;
-  --foreground: #131517;
-  --card: #ffffff;
-  --card-foreground: #131517;
-  --popover: #ffffff;
-  --popover-foreground: #131517;
-
-  --primary: #192b03;
-  --primary-foreground: #d1fe17;
-  --primary-hover: #223805;
-  --primary-edge: #436e0a;
-
-  --secondary: #edf7cc;
-  --secondary-foreground: #192b03;
-
-  --muted: #f2f5eb;
-  --muted-foreground: #667057;
-
-  --accent: #e4f2aa;
-  --accent-foreground: #131517;
-
-  --destructive: #d1004e;
-  --destructive-foreground: #ffffff;
-
-  --border: #e0e8d3;
-  --border-soft: #edf2e4;
-  --input: #e0e8d3;
-  --ring: #739408;
-
-  --radius: 0.75rem;
-
-  --shadow-brand-button: 0 2px 8px rgba(25, 43, 3, 0.12);
-  --glow-brand: 0 0 0.4rem rgba(115, 148, 8, 0.25);
-
-  --sidebar: #f2f5eb;
-  --sidebar-foreground: #131517;
-  --sidebar-primary: #192b03;
-  --sidebar-primary-foreground: #d1fe17;
-  --sidebar-accent: #e4f2aa;
-  --sidebar-accent-foreground: #131517;
-  --sidebar-border: #e0e8d3;
-  --sidebar-ring: #739408;
+[data-numeric],
+.tabular-nums {
+  font-family: var(--font-numeric, "Satoshi", sans-serif);
+  font-feature-settings: "tnum" 1;
+  direction: ltr;
+  unicode-bidi: isolate;
 }
